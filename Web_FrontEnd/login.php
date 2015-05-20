@@ -14,7 +14,7 @@
 		<div id="headercontain">
         headercontain
 			<div id="logo">
-				<img src="images/logo.png" />
+				<a href="index.html"><img src="images/logo.png" /></a>
 			</div>
             <div id="account">
                 	
@@ -23,7 +23,7 @@
                  </div>
                    
                     <div id="register">
-						<a href="gooogle.com">register</a>
+						<a href="register.htm">register</a>
                     </div>
                     
             </div>
@@ -32,17 +32,17 @@
             <div id="menucontain">
 			<div id="dropmenu">
 				<ul>
-					<li>Home</li>
-					<li>About</li>
+					<li><a href="index.html">Trang Chủ</a></li>
+					<li>Sản Phẩm</li>
 					<li>Portfolio
-					<ul>
-						<li>Web Design</li>
-						<li>Web Development</li>
-						<li>Illustrations</li>
-					</ul>
+						<ul>
+							<li>Web Design</li>
+							<li>Web Development</li>
+							<li>Illustrations</li>
+						</ul>
 					</li>
-					<li>Blog</li>
-					<li>Contact</li>
+					<li>Thành Viên</li>
+					<li>Liên Hệ</li>
 				</ul>
 			</div>
      			<div id="find">
@@ -60,48 +60,38 @@
     
      
       <!------------------------ Body ---------------------->
-     
-     
-
 	<div id = "wrapper">
-	
-	<!-----------------------------------Register Open------------------------------------------>
-		<div id="registercontain">
-			<h4> Đăng Ký Tài Khoản</h4>
 			
-			
-			<table  CELLSPACING="1" WIDTH="500px">
-				<TR>
-					<TD WIDTH="52%">Username</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br></TD>
-				</TR>
-				<TR>
-					<TD WIDTH="52%">Mật Khẩu</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
-				</TR>
-				<TR>
-					<TD WIDTH="52%">Xác Nhận Mật Khẩu</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
-				</TR>
-				<TR>
-					<TD WIDTH="52%">Email</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
-				</TR>
-				<TR>
-					<TD WIDTH="52%">Họ Tên</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
-				</TR>
-				<TR>
-					<center>
-					<TD><input type="submit" name="submitregister"><br> </TD>
-					</center>
-				</TR>
-				
-			</table>
-		</div>
-		
-	<!-----------------------------------Register Close------------------------------------------>
-			
+			  <!--------------------Login open ---------------->
+  <table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<tr>
+<form name="form1" method="post" action="checklogin.php">
+<td>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+<tr>
+<td colspan="3"><strong>Member Login </strong></td>
+</tr>
+<tr>
+<td width="78">Username</td>
+<td width="6">:</td>
+<td width="294"><input name="username" type="text" id="username"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td>:</td>
+<td><input name="password" type="password" id="password"></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><input type="submit" name="Submit" value="Login"></td>
+</tr>
+</table>
+</td>
+</form>
+</tr>
+</table>
+   <!--------------------Login close ---------------->
 			
             
 			

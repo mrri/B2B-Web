@@ -12,46 +12,76 @@
     
     <div id="header">
 		<div id="headercontain">
-        headercontain
+			<!-- Logo -->
 			<div id="logo">
-				<a href="index.html"><img src="images/logo.png" /></a>
+				<a href="index.php"><img src="images/logo.png" /></a>
 			</div>
-            <div id="account">
-                	
-                <div id="login">
-					<a href="login.html">login</a>
-                 </div>
-                   
-                    <div id="register">
-						<a href="register.htm">register</a>
-                    </div>
-                    
-            </div>
-		</div>
-		<div id="menu">
-            <div id="menucontain">
-			<div id="dropmenu">
-				<ul>
-					<li><a href="index.html">Trang Chủ</a></li>
-					<li>Sản Phẩm</li>
-					<li>Portfolio
-						<ul>
-							<li>Web Design</li>
-							<li>Web Development</li>
-							<li>Illustrations</li>
-						</ul>
-					</li>
-					<li>Thành Viên</li>
-					<li>Liên Hệ</li>
-				</ul>
-			</div>
-     			<div id="find">
+			<!--Khung Search-->
+			<div id="find">
 					<form>
 						<input type="text" name="tfind" />
 						<input type="submit" name="find" />
 					</form>
-        	 	</div> 
-			</div>
+        	</div> 
+			
+	
+		</div>
+		<div id="menu">
+            <div id="menucontain">
+				<!-- Dropdown mennu-->
+				<div id="dropmenu">
+					<ul>
+						<li>Danh Mục
+							<ul>
+								<li>Điện Máy</li>
+								<li>Điện Tử</li>
+								<li>Gia Dụng</li>
+								<li>Kĩ Thuật Số</li>
+							</ul>
+						</li>
+						<li>Sản Phẩm</li>
+						<li>Portfolio
+							<ul>
+								<li>Web Design</li>
+								<li>Web Development</li>
+								<li>Illustrations</li>
+							</ul>
+						</li>
+						<li>Thành Viên</li>
+						<li>Liên Hệ</li>
+					</ul>
+				</div>
+					<!--Khung Account-->
+				<div id="account">
+                	
+					<div id="login">
+						<?php 
+						session_start();
+						if ( empty($_SESSION['username']))
+							{ 
+								echo "<a href='login.php'>Đăng Nhập</a>";
+							}
+						else
+							{
+								$username = $_SESSION['username'];
+								echo "<a href='admin.php'>$username</a>";
+							} 
+						?>
+					</div>
+					<div id="register">
+						<?php
+						if ( empty($_SESSION['username']))
+							{ 
+								echo "<a href='register.php'>Đăng Ký</a>";
+							}
+						else
+							{
+								echo "<a href='logout.php'>Đăng Xuất</a>";
+							} 
+					?>
+					</div>
+				</div>
+            </div>
 		</div>
 	</div>
     
@@ -60,32 +90,13 @@
     
      
       <!------------------------ Body ---------------------->
+     
+     
+
 	<div id = "wrapper">
 			
-			  <!--------------------Login open ---------------->
-    <div id="loginpage">
-    	<div id="user">
-       		 <p> user </p>
-             
-             <form>
-             	<input type="text" name="user" />
-             </form>
-            
-        </div>
-        
-        <div id="password">
-       		 <p>pass</p>
-             <center>
-             <form>
-             	<input type="text" name="user" />
-             </form>
-             </center>
-        </div>
-        <center>
-        <input type="submit" name="sub">
-        </center>
-    </div>
-   <!--------------------Login close ---------------->
+			
+			
 			
             
 			

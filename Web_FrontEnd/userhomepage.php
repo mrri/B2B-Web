@@ -14,16 +14,21 @@
 		<div id="headercontain">
         headercontain
 			<div id="logo">
-				<img src="images/logo.png" />
+				<a href="index.html"><img src="images/logo.png" /></a>
 			</div>
             <div id="account">
                 	
                 <div id="login">
-					<a href="login.html">login</a>
+					<!--<a href="login.html">login</a>-->
+					<?php
+						session_start();
+						$username = $_SESSION['myusername'];
+						echo "<a href='admin.php'>$username</a>";
+					?>
                  </div>
                    
                     <div id="register">
-						<a href="gooogle.com">register</a>
+						<a href="register.htm">Đăng Xuất</a>
                     </div>
                     
             </div>
@@ -32,17 +37,17 @@
             <div id="menucontain">
 			<div id="dropmenu">
 				<ul>
-					<li>Home</li>
-					<li>About</li>
+					<li><a href="index.html">Trang Chủ</a></li>
+					<li>Sản Phẩm</li>
 					<li>Portfolio
-					<ul>
-						<li>Web Design</li>
-						<li>Web Development</li>
-						<li>Illustrations</li>
-					</ul>
+						<ul>
+							<li>Web Design</li>
+							<li>Web Development</li>
+							<li>Illustrations</li>
+						</ul>
 					</li>
-					<li>Blog</li>
-					<li>Contact</li>
+					<li>Thành Viên</li>
+					<li>Liên Hệ</li>
 				</ul>
 			</div>
      			<div id="find">
@@ -64,43 +69,8 @@
      
 
 	<div id = "wrapper">
-	
-	<!-----------------------------------Register Open------------------------------------------>
-		<div id="registercontain">
-			<h4> Đăng Ký Tài Khoản</h4>
 			
 			
-			<table  CELLSPACING="1" WIDTH="500px">
-				<TR>
-					<TD WIDTH="52%">Username</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br></TD>
-				</TR>
-				<TR>
-					<TD WIDTH="52%">Mật Khẩu</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
-				</TR>
-				<TR>
-					<TD WIDTH="52%">Xác Nhận Mật Khẩu</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
-				</TR>
-				<TR>
-					<TD WIDTH="52%">Email</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
-				</TR>
-				<TR>
-					<TD WIDTH="52%">Họ Tên</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
-				</TR>
-				<TR>
-					<center>
-					<TD><input type="submit" name="submitregister"><br> </TD>
-					</center>
-				</TR>
-				
-			</table>
-		</div>
-		
-	<!-----------------------------------Register Close------------------------------------------>
 			
 			
             
