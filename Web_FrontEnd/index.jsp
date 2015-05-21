@@ -74,30 +74,10 @@
 				<div id="account">
                 	
 					<div id="login">
-						<?php 
-						session_start();
-						if ( empty($_SESSION['username']))
-							{ 
-								echo "<a href='login.php'>Đăng Nhập</a>";
-							}
-						else
-							{
-								$username = $_SESSION['username'];
-								echo "<a href='admin.php'>$username</a>";
-							} 
-						?>
+						<a href='login.jsp'>Đăng nhập</a>
 					</div>
 					<div id="register">
-						<?php
-						if ( empty($_SESSION['username']))
-							{ 
-								echo "<a href='register.php'>Đăng Ký</a>";
-							}
-						else
-							{
-								echo "<a href='logout.php'>Đăng Xuất</a>";
-							} 
-					?>
+						<a href='register.jsp'>Đăng ký</a>
 					</div>
 				</div>
             </div>
