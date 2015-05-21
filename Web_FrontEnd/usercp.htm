@@ -19,11 +19,16 @@
             <div id="account">
                 	
                 <div id="login">
-					<a href="login.html">login</a>
+					<!--<a href="login.html">login</a>-->
+					<?php
+						session_start();
+						$username = $_SESSION['myusername'];
+						echo "<a href='admin.php'>$username</a>";
+					?>
                  </div>
                    
                     <div id="register">
-						<a href="register.htm">register</a>
+						<a href="register.htm">Đăng Xuất</a>
                     </div>
                     
             </div>

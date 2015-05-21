@@ -1,8 +1,12 @@
 /*Home Page*/
-
+body{
+	margin:0;
+	padding:0;
+}
 #header {
 	width:100%;
 	background:blue;
+	
 }
 #headercontain{
 	width:960px;
@@ -12,6 +16,19 @@
 #logo{
 	float:left;
 }
+#find{
+	float:right;
+	border: 1px solid black;
+}
+#search{
+	width: 750px;
+	background: transparent;
+	border: 1px solid green;
+	float:right;
+}
+
+
+
 #menu{
 	width:100%;
 	background:#eeeeee;
@@ -114,14 +131,29 @@
 	height:900px;
 	border: 1px solid black;
 }
-
-
-
-#find{
-	
-	float:right;
-	border: 1px solid black;
+#slider{
+	width:960px;
+	height: 150px;
+	border: 1px solid red;
 }
+#slider1{
+	width:960px;
+	height: 150px;
+	border: 1px solid red;
+}
+#slider2{
+	width:960px;
+	height: 150px;
+	border: 1px solid red;
+}
+#slider3{
+	width:960px;
+	height: 150px;
+	border: 1px solid red;
+}
+
+
+
 
 #footer{
 	clear:both;
@@ -129,6 +161,7 @@
 	height:150px;
 	background: #2d6dab;
 	color: white;
+	
 	
 }
 #footcontain{
@@ -186,3 +219,8 @@
 
 /*Register Page*/
 
+#register{
+	float:left;
+	padding:10px;
+	
+}
