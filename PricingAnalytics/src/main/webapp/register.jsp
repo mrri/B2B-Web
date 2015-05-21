@@ -24,47 +24,54 @@
 			<table  CELLSPACING="1" WIDTH="500px">
 				<TR>
 					<TD WIDTH="52%">Tài Khoản*</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br></TD>
+					<TD WIDTH="48%"><input type="text" name="user_name"><br></TD>
 				</TR>
 				<TR>
 					<TD WIDTH="52%">Mật Khẩu*</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
+                                        <TD WIDTH="48%"><input type="password" name="password"><br> </TD>
 				</TR>
 				<TR>
 					<TD WIDTH="52%">Xác Nhận Mật Khẩu*</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
+					<TD WIDTH="48%"><input type="password" name="comfirm_password"><br> </TD>
 				</TR>
 				<TR>
 					<TD WIDTH="52%">Email*</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
+					<TD WIDTH="48%"><input type="text" name="email"><br> </TD>
 				</TR>
 				<TR>
 					<TD WIDTH="52%">Họ Tên</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
-				</TR>
-				<TR>
-					<TD WIDTH="52%">Ngày sinh</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
+					<TD WIDTH="48%"><input type="text" name="full_name"><br> </TD>
 				</TR>
 				<TR>
 					<TD WIDTH="52%">Công ty</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
+					<TD WIDTH="48%"><input type="text" name="company"><br> </TD>
 				</TR>
 				<TR>
 					<TD WIDTH="52%">Địa chỉ</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
+					<TD WIDTH="48%"><input type="text" name="address"><br> </TD>
 				</TR>
+                            
+                                <TR>
+					<TD WIDTH="52%">Quốc gia</TD>
+					<TD WIDTH="48%"><input type="text" name="country"><br> </TD>
+				</TR>
+                            
 				<TR>
 					<TD WIDTH="52%">Điện thoại</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
+					<TD WIDTH="48%"><input type="text" name="phone"><br> </TD>
 				</TR>
 				<TR>
 					<TD WIDTH="52%">Fax</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
+					<TD WIDTH="48%"><input type="text" name="fax"><br> </TD>
 				</TR>
 				<TR>
 					<TD WIDTH="52%">Website</TD>
-					<TD WIDTH="48%"><input type="text" name="username"><br> </TD>
+					<TD WIDTH="48%"><input type="text" name="website"><br> </TD>
+				</TR>
+                                
+                                <TR>
+					<TD WIDTH="52%" >Giới thiệu công ty</TD>
+					<TD WIDTH="48%"><input type="text" name="company_description"><br> </TD>
 				</TR>
 
 				<TR>
