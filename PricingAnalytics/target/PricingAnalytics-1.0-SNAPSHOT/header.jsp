@@ -16,7 +16,7 @@
 		<div id="headercontain">
 			<!-- Logo -->
 			<div id="logo">
-				<a href="index.php"><img src="images/logo.png" /></a>
+				<a href="index.jsp"><img src="images/logo.png" /></a>
 			</div>
 			<!--Khung Search-->
 		<!--<div id="find">
@@ -73,11 +73,11 @@
 					</ul>
 				</div>
 					<!--Khung Account-->
-				<div id="account">
-                                    <div id="login">
+				<div id="account_box">
+                                    <div id="account_box1">
                                             <a href='login.jsp'>Đăng nhập</a>
                                     </div>
-                                    <div id="register">
+                                    <div id="account_box2">
                                             <a href='register.jsp'>Đăng ký</a>
                                     </div>
 				</div>

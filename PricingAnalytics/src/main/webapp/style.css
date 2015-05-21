@@ -42,15 +42,15 @@ body{
 	
 	border: 1px solid black;
 }
-#account{
+#account_box{
 	width:200px;
 	float:right;
 }
-#login{
+#account_box1{
 	width:100px;
 	float:left;
 }
-#register{
+#account_box2{
 	width:100px;
 	float:right;
 }
@@ -190,9 +190,6 @@ body{
 #foot4{
 	clear:both;
 }
-
-
-
 
 
 /* Login Page */
