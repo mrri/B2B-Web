@@ -26,26 +26,22 @@
 			</form>
         </div> 
 		-->
-	<div id="search">
-		<script>
-			(function() {
-			var cx = '011043942123399578564:g1c8onrmk8q';
-			var gcse = document.createElement('script');
-			gcse.type = 'text/javascript';
-			gcse.async = true;
-			gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-			'//cse.google.com/cse.js?cx=' + cx;
-			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(gcse, s);
-		})();
-		</script>
-		<gcse:search></gcse:search>
-	</div>
+                <div id="search">
+                        <script>
+                                (function() {
+                                var cx = '011043942123399578564:g1c8onrmk8q';
+                                var gcse = document.createElement('script');
+                                gcse.type = 'text/javascript';
+                                gcse.async = true;
+                                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                '//cse.google.com/cse.js?cx=' + cx;
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(gcse, s);
+                        })();
+                        </script>
+                        <gcse:search></gcse:search>
+                </div>
 		<!-- end search-->
-		
-		
-		
-	
 		</div>
 		<div id="menu">
             <div id="menucontain">
@@ -68,21 +64,34 @@
 								<li>Illustrations</li>
 							</ul>
 						</li>
-						<li>Thành Viên</li>
-						<li>Thành Viên</li>
+						<li>Nhà cung cấp</li>
+						<li>Quản lý</li>
 					</ul>
 				</div>
 					<!--Khung Account-->
 				<div id="account_box">
                                     <div id="account_box1">
-                                            <a href='login.jsp'>Đăng nhập</a>
+                                          
+                                            <c:if test="${sessionScope['tendaydu']!=null}">
+                                                <b>Xin chào bạn :</b> <h3><font color="red">${sessionScope['tendaydu']}</font></h3>
+                                            </c:if>
+                                            <c:if test="${sessionScope['tendaydu']==null}">
+                                                 <a href='login.jsp'>Đăng nhập</a>
+                                            </c:if>
+                                            
                                     </div>
                                     <div id="account_box2">
-                                            <a href='register.jsp'>Đăng ký</a>
+                                        
+                                            <c:if test="${sessionScope['tendaydu']!=null}">
+                                                <a href="logoutprocess">Logout</a>
+                                            </c:if>
+                                            <c:if test="${sessionScope['tendaydu']==null}">
+                                                 <a href='register.jsp'>Đăng ký</a>
+                                            </c:if>
                                     </div>
 				</div>
+                 </div>
             </div>
-		</div>
 	</div>
     </body>
 </html>
