@@ -66,23 +66,23 @@
                     <table  CELLSPACING="1" WIDTH="500px">
                         <TR>
                             <TD WIDTH="33%">Tài Khoản*</TD>
-                            <TD WIDTH="48%"><input type="text" name="user_name"><br></TD>
+                            <TD WIDTH="67%"><input type="text" name="user_name"><br></TD>
                         </TR>
                         <TR>
                             <TD WIDTH="33%">Mật Khẩu*</TD>
-                            <TD WIDTH="48%"><input type="password" name="password"><br> </TD>
+                            <TD WIDTH="67%"><input type="password" name="password"><br> </TD>
                         </TR>
                         <TR>
                             <TD WIDTH="33%">Xác Nhận Mật Khẩu*</TD>
-                            <TD WIDTH="48%"><input type="password" name="comfirm_password"><br> </TD>
+                            <TD WIDTH="67%"><input type="password" name="comfirm_password"><br> </TD>
                         </TR>
                         <TR>
                             <TD WIDTH="33%">Email*</TD>
-                            <TD WIDTH="48%"><input type="text" name="email"><br> </TD>
+                            <TD WIDTH="67%"><input type="text" name="email"><br> </TD>
                         </TR>
                         <TR>
                             <TD WIDTH="33%">Họ Tên*</TD>
-                            <TD WIDTH="48%"><input type="text" name="full_name"><br> </TD>
+                            <TD WIDTH="67%"><input type="text" name="full_name"><br> </TD>
                         </TR>
                         <TR>
                             <TD WIDTH="33%">Công ty</TD>
@@ -90,34 +90,34 @@
                         </TR>
                         <TR>
                             <TD WIDTH="33%">Địa chỉ</TD>
-                            <TD WIDTH="48%"><input type="text" name="address"><br> </TD>
+                            <TD WIDTH="67%"><input type="text" name="address"><br> </TD>
                         </TR>
 
                         <TR>
                             <TD WIDTH="33%">Quốc gia</TD>
-                            <TD WIDTH="48%"><input type="text" name="country"><br> </TD>
+                            <TD WIDTH="67%"><input type="text" name="country"><br> </TD>
                         </TR>
 
                         <TR>
                             <TD WIDTH="33%">Điện thoại</TD>
-                            <TD WIDTH="48%"><input type="text" name="phone"><br> </TD>
+                            <TD WIDTH="67%"><input type="text" name="phone"><br> </TD>
                         </TR>
                         <TR>
                                 <TD WIDTH="33%">Fax</TD>
-                                <TD WIDTH="48%"><input type="text" name="fax"><br> </TD>
+                                <TD WIDTH="67%"><input type="text" name="fax"><br> </TD>
                         </TR>
                         <TR>
                                 <TD WIDTH="33%">Website</TD>
-                                <TD WIDTH="48%"><input type="text" name="website"><br> </TD>
+                                <TD WIDTH="67%"><input type="text" name="website"><br> </TD>
                         </TR>
 
                         <TR>
                                 <TD WIDTH="33%" >Giới thiệu công ty</TD>
-                                <TD WIDTH="48%"><input type="text" name="company_description"><br> </TD>
+                                <TD WIDTH="67%"><input type="text" name="company_description"><br> </TD>
                         </TR>
                         <TR>
                                 
-                                <TD WIDTH="48%"><input type="checkbox" value="Tôi đồng ý" name="company_description"><br> </TD>
+                                <TD WIDTH="67%"><input type="checkbox" value="Tôi đồng ý" name="company_description"><br> </TD>
                         </TR>
                         <TR>
                                  <TD align="center"><input type="submit" value="Đăng ký"></TD>
