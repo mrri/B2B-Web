@@ -4,6 +4,27 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="style.css">
 <title>B2b</title>
+<!-- jscrip slideshow -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+
+			$("#slideshow > div:gt(0)").hide();
+
+			setInterval(function() {
+			  $('#slideshow > div:first')
+			    .fadeOut(1000)
+			    .next()
+			    .fadeIn(1000)
+			    .end()
+			    .appendTo('#slideshow');
+			},  5000);
+
+		});
+	</script>
+<!--end scrip-->
+
+
 </head>
 
 <body>
@@ -14,14 +35,25 @@
      
      
 
-	<div id = "wrapper">
-			
-		<div id="slider">
-			Slider 
-		</div>
-		<div id="slider1">
-			Danh Mục 1
-		</div>
+	<div id = "wrapper">		
+            <div id="slideshow">
+		<div>
+                    <img src="images/slideshow/1.jpg" width="940px" height="240px">
+                </div>
+                <div>
+                     <img src="images/slideshow/2.jpg" width="940px" height="240px">
+                </div>
+                <div>
+                     <img src="images/slideshow/3.jpg" width="940px" height="240px">
+                </div>
+                <div>
+                     <img src="images/slideshow/4.jpg" width="940px" height="240px">
+                </div>
+            </div>
+            
+   
+        
+            <br>
 		<div id="slider2">
 			Danh Mục 1
 		</div>

@@ -12,11 +12,24 @@
      <%@include file="header.jsp" %>
       <!------------------------ Body ---------------------->
      <div id="wrapper">
-         <div id="controlpannel">
-           
+         <div id="user_cp">
+             <table>
+                 <tr>
+                     Bảng điều khiển
+                 </tr>
+                <td>
+                     <a href="addnewproduct.jsp">Thêm sản phẩm</a></br>
+                     Hồ sơ công ty</br>
+                     Quản lý sản phầm</br>
+                     Quản lý tài khoản</br>
+                     Đăng xuất</br>
+                 </td>
+             </table>
          </div>
          
-         <div id=""
+         <div id="aa">
+         </div>
+             
      </div>
      
 

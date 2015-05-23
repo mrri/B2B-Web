@@ -1,22 +1,73 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="style.css">
-<title>B2b</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>B2b</title>
+
+<script language="JavaScript">
+    function checkinput(){
+        user_name=document.register.user_name;
+        password=document.register.password;
+        comfirm_password=document.register.comfirm_password;
+        full_name=document.register. full_name;
+        address=document.register.address;
+        email=document.register.email;
+        phone=document.register.phone;
+        reg1=/^[0-9A-Za-z]+[0-9A-Za-z_]*@[\w\d.]+.\w{2,4}$/;
+        testmail=reg1.test(email.value);
+        if(user_name.value==""){
+            alert("Hãy chọn tên đăng nhập");
+            username.focus();
+            return false;
+        }
+        if(password.value==""){
+            alert("Chưa nhập mật khẩu");
+            password.focus();
+            return false;
+        }
+        if(comfirm_password.value==""||comfirm_password.value!==password.value){
+            alert("Mật khẩu lần 2 chưa khớp");
+            comfirm_password.focus();
+            return false;
+        }
+        if(full_name.value==""){
+            alert("Hãy nhập vào họ tên của bạn");
+            hoten.focus();
+            return false;
+        }
+        if(address.value==""){
+            alert("Chưa nhập địa chỉ");
+            address.focus();
+            return false;
+        }
+        if(!testmail){
+            alert("Địa chỉ email không hợp lệ");
+            email.focus();
+            return false;
+        }
+        if(isNaN(dienthoai.value)){
+            alert("Số điện thoại chưa chính xác");
+            dienthoai.focus();
+            return false;
+        }
+        else alert('OK, đã nhập đúng dữ liệu');
+        return true;
+    }
+</script>
 </head>
 
 <body>
-	
     <!------------------------ Header ---------------------->
       <%@include file="header.jsp" %>
      
       <!------------------------ Body ---------------------->
 	<div id = "wrapper">
 	<!-----------------------------------Register Open------------------------------------------>
-            <h4> Đăng Ký Tài Khoản</h4>
-            <div id="register">
-                <form name="register"  action='checkregister.jsp' method='post'>
+        
+        <h4> Đăng Ký Tài Khoản</h4>
+          <div id="register">
+               <form name="register" method="post" action="register" onsubmit="return checkinput();">
                     <table  CELLSPACING="1" WIDTH="500px">
                         <TR>
                             <TD WIDTH="52%">Tài Khoản*</TD>
@@ -74,19 +125,22 @@
                                 <TD WIDTH="48%"><input type="checkbox" value="Tôi đồng ý" name="company_description"><br> </TD>
                         </TR>
                         <TR>
-                            <center>
-                                <TD><input type="submit" value="Gửi" name="submitregister" ><br> </TD>
-                            </center>
+                                 <TD align="center"><input type="submit" value="Đăng ký"></TD>
                         </TR>
-
                     </table>
-                </form>
+               </form>
             </div>
 		
     <!-----------------------------------Register Close------------------------------------------>	
 	</div>
+      
     <!------------------------ footer ---------------------->
     <%@include file="footer.jsp" %>
     <!-- end footer-->
-	</body>
+	
+
+
+
+
+</body>
 </html>
