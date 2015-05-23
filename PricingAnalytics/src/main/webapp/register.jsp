@@ -11,14 +11,14 @@
         password=document.register.password;
         comfirm_password=document.register.comfirm_password;
         full_name=document.register. full_name;
-        address=document.register.address;
+        
         email=document.register.email;
         phone=document.register.phone;
         reg1=/^[0-9A-Za-z]+[0-9A-Za-z_]*@[\w\d.]+.\w{2,4}$/;
         testmail=reg1.test(email.value);
         if(user_name.value==""){
             alert("Hãy chọn tên đăng nhập");
-            username.focus();
+            user_name.focus();
             return false;
         }
         if(password.value==""){
@@ -31,24 +31,20 @@
             comfirm_password.focus();
             return false;
         }
-        if(full_name.value==""){
-            alert("Hãy nhập vào họ tên của bạn");
-            hoten.focus();
-            return false;
-        }
-        if(address.value==""){
-            alert("Chưa nhập địa chỉ");
-            address.focus();
-            return false;
-        }
         if(!testmail){
             alert("Địa chỉ email không hợp lệ");
             email.focus();
             return false;
         }
-        if(isNaN(dienthoai.value)){
+        if(full_name.value==""){
+            alert("Hãy nhập vào họ tên của bạn");
+            full_name.focus();
+            return false;
+        }
+        
+        if(isNaN(phone.value)){
             alert("Số điện thoại chưa chính xác");
-            dienthoai.focus();
+            phone.focus();
             return false;
         }
         else alert('OK, đã nhập đúng dữ liệu');
@@ -86,7 +82,7 @@
                             <TD WIDTH="48%"><input type="text" name="email"><br> </TD>
                         </TR>
                         <TR>
-                            <TD WIDTH="52%">Họ Tên</TD>
+                            <TD WIDTH="52%">Họ Tên*</TD>
                             <TD WIDTH="48%"><input type="text" name="full_name"><br> </TD>
                         </TR>
                         <TR>

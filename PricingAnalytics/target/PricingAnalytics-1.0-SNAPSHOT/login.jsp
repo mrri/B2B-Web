@@ -12,7 +12,7 @@
        
         if(user_name.value==""){
             alert("Hãy chọn tên đăng nhập");
-            username.focus();
+            user_name.focus();
             return false;
         }
         if(password.value==""){
