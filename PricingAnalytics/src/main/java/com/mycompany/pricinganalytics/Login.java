@@ -16,6 +16,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -52,14 +53,15 @@ public class Login extends HttpServlet {
         }
         else{
             if(user_info.getPassword().equals(password)){
-                response.getWriter().println("Đăng nhập thành công.");
+                HttpSession session = request.getSession(true);
+                session.setAttribute("sessionUserName", user_name);
+                response.sendRedirect("index.jsp");
+                //response.getWriter().println("Đăng nhập thành công.");
             }
             else{
                 response.getWriter().println("Sai mật khẩu.");
             }
         }
-            
-        
     }
    
     @Override

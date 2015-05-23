@@ -88,7 +88,7 @@
                                             <c:if test="${sessionScope['tendaydu']==null}">
                                                  <a href='register.jsp'>Đăng ký</a>
                                             </c:if>
-                                    </div>
+                                    </div>                                    
 				</div>
                  </div>
             </div>

@@ -56,25 +56,22 @@ public class Register extends HttpServlet {
         List result_userName = null;
         result_userName = query_userName.getResultList();
         
-        Query query_email = entityManager.createQuery("SELECT E.user_id FROM UserInfo E WHERE E.email =:email");
+        Query query_email = entityManager.createQuery("SELECT E.user_id FROM UserInfo E WHERE E.email= :email");
         query_email.setParameter("email", user_info.getEmail());
-        List result_email = null;
-        result_email = query_userName.getResultList();
+        List result_email = query_email.getResultList();
         
-        if(result_email != null && result_userName != null){
-            if(!result_email.isEmpty()){
-                response.getWriter().println("Tài khoản đã tồn tại. Vui lòng chọn tài khoản khác");
-            }
-            else if(!result_email.isEmpty()){
-                response.getWriter().println("Email đã được đăng ký");
-            }
-            else{
-                entityManager.getTransaction().begin();
-                entityManager.persist(user_info);
-                entityManager.getTransaction().commit();
-                entityManager.close();
-                response.getWriter().println("Đăng ký thành công");
-            } 
+        
+        if (!result_userName.isEmpty()) {
+            response.getWriter().println("Tài khoản đã tồn tại. Vui lòng chọn tài khoản khác");
+        } else if (!result_email.isEmpty()) {
+            response.getWriter().println("Email đã được đăng ký");
+        } else {
+            entityManager.getTransaction().begin();
+            entityManager.persist(user_info);
+            entityManager.getTransaction().commit();
+            entityManager.close();
+            response.getWriter().println("Đăng ký thành công");
         }
+        
     }
 }
