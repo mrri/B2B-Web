@@ -83,7 +83,7 @@
                                     <div id="account_box2">
                                         
                                             <c:if test="${sessionScope['user_name']!=null}">
-                                                <a href="logoutprocess">Logout</a>
+                                                <a href="logout.jsp">Logout</a>
                                             </c:if>
                                             <c:if test="${sessionScope['user_name']==null}">
                                                  <a href='register.jsp'>Đăng ký</a>
