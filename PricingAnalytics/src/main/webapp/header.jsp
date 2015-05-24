@@ -71,23 +71,29 @@
 					<!--Khung Account-->
 				<div id="account_box">
                                     <div id="account_box1">
-                                          
-                                            <c:if test="${sessionScope['user_name']!=null}">
-                                                <b>Xin chào bạn :</b> <h3><font color="red">${sessionScope['user_name']}</font></h3>
-                                            </c:if>
-                                            <c:if test="${sessionScope['user_name']==null}">
-                                                 <a href='login.jsp'>Đăng nhập</a>
-                                            </c:if>
-                                            
+                                            <%
+                                              String user_name =  (String)session.getAttribute("user_name"); 
+                                                if(user_name!=null)
+                                                {
+                                                  %>   <font >${sessionScope['user_name']}</font><%
+                                                }
+                                              else
+                                                {
+                                                   %> <a href='login.jsp'>Đăng nhập</a><%
+                                                }
+                                            %>
                                     </div>
                                     <div id="account_box2">
-                                        
-                                            <c:if test="${sessionScope['user_name']!=null}">
-                                                <a href="logout.jsp">Logout</a>
-                                            </c:if>
-                                            <c:if test="${sessionScope['user_name']==null}">
-                                                 <a href='register.jsp'>Đăng ký</a>
-                                            </c:if>
+                                          <%
+                                                if(user_name!=null)
+                                                {
+                                                  %>   <a href="logout.jsp">Logout</a><%
+                                                }
+                                              else
+                                                {
+                                                   %> <a href='register.jsp'>Đăng ký</a><%
+                                                }
+                                            %>
                                     </div>                                    
 				</div>
                  </div>

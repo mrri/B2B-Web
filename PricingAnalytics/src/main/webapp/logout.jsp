@@ -17,9 +17,7 @@
      String username=(String)session.getAttribute("user_name");
     if(username!=null)
         {
-           out.println(username+" loged out, <a href=\"index.jsp\">Back</a>");
             session.removeAttribute("user_name");
-             
         }
      else 
          {
@@ -29,6 +27,6 @@
  
  
 %>  
-<meta http-equiv="refresh" content="2; url=index.jsp" />
+<meta http-equiv="refresh" content="0; url=index.jsp" />
     </body>
 </html>

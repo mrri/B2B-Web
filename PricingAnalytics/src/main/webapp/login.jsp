@@ -38,9 +38,18 @@
 	<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
             <form name="login" method="post" action="login" onsubmit="return checkinput();">
                 <td>
+                     
                     <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
                         <tr>
                             <td colspan="3"><strong>Member Login </strong></td>
+                            <%
+                      String user_name =  (String)session.getAttribute("user_name"); 
+                        if(user_name=="1")
+                        {
+                          %> Tài khoản hoặc mật khẩu không chính xác <%
+                        }
+                      
+                    %>
                         </tr>
                         <tr>
                             <td width="78">Username</td>

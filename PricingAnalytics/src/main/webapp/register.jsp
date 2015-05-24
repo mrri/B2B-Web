@@ -20,6 +20,11 @@
             user_name.focus();
             return false;
         }
+         if(user_name.value.length < 3){
+            alert("Tài khoản tối thiểu 3 kí tự");
+            user_name.focus();
+            return false;
+        }
         if(password.value==""){
             alert("Chưa nhập mật khẩu");
             password.focus();
