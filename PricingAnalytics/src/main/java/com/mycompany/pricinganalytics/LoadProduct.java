@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Quoc Huy Ngo
  */
-@WebServlet(name = "LoadProduct", urlPatterns = {"/loadproduct"})
+@WebServlet(name = "LoadProduct", urlPatterns = {"/product"})
 public class LoadProduct extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
