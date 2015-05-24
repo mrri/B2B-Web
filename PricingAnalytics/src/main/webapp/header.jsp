@@ -73,7 +73,7 @@
                                     <div id="account_box1">
                                             <%
                                               String user_name =  (String)session.getAttribute("user_name"); 
-                                                if(user_name!=null)
+                                                if(user_name!=null||user_name!="1")
                                                 {
                                                   %>   <font >${sessionScope['user_name']}</font><%
                                                 }

@@ -20,7 +20,6 @@
             password.focus();
             return false;
         }
-        else alert('OK, đã nhập đúng dữ liệu');
         return true;
     }
 </script>
@@ -43,10 +42,10 @@
                         <tr>
                             <td colspan="3"><strong>Member Login </strong></td>
                             <%
-                      String user_name =  (String)session.getAttribute("user_name"); 
-                        if(user_name=="1")
+                     String username =  (String)session.getAttribute("user_name"); 
+                        if(username=="1")
                         {
-                          %> Tài khoản hoặc mật khẩu không chính xác <%
+                            %> <p>Tài khoản hoặc mật khẩu không chính xác</p> <%
                         }
                       
                     %>
