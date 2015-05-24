@@ -26,9 +26,6 @@ body{
 	border: 1px solid green;
 	float:right;
 }
-
-
-
 #menu{
 	width:100%;
 	background:#eeeeee;
@@ -125,11 +122,28 @@ body{
 }
 /*end dropmenu*/
 #danhmucsanpham{
-    width: 940px;
+    z-index: 10;
+    width: 960px;
     height: 200px;
-    background:red;
+    clear: both;
+    background: #eeeeee;
 }
-
+#danhmuc1{
+    float:left;
+    width: 240px;
+}
+#danhmuc2{
+    float:left;
+    width: 240px;
+}
+#danhmuc3{
+    float:left;
+    width: 240px;
+}
+#danhmuc3{
+    float:left;
+    width: 240px;
+}
 
 
 
