@@ -14,11 +14,11 @@
     <body>
        <%
  
-     String username=(String)session.getAttribute("username");
+     String username=(String)session.getAttribute("user_name");
     if(username!=null)
         {
            out.println(username+" loged out, <a href=\"index.jsp\">Back</a>");
-            session.removeAttribute("username");
+            session.removeAttribute("user_name");
              
         }
      else 
