@@ -1,6 +1,7 @@
 
 package PricingAnalyticsObject;
 
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -14,6 +15,7 @@ public class Product {
     int user_id;
     String product_category;
     String product_name;
+    String date;
     @Column(columnDefinition = "TEXT")
     String description;
     String price;
@@ -75,15 +77,25 @@ public class Product {
     public void setImage(String image) {
         this.image = image;
     }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+    
     
     public Product(){
         
     }
     
-    public Product(int user_id, String product_category, String product_name, String description, String price, String image){
+    public Product(int user_id, String product_category, String product_name, String date,String description, String price, String image){
         this.user_id = user_id;
         this.product_category = product_category;
         this.product_name = product_name;
+        this.date = date;
         this.description = description;
         this.price = price;
         this.image = image;

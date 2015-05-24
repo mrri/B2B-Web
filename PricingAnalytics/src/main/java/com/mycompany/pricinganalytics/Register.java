@@ -18,6 +18,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -47,7 +48,7 @@ public class Register extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
         UserInfo user_info = new UserInfo(request.getParameter("user_name"), request.getParameter("password"), request.getParameter("email"), request.getParameter("full_name"), request.getParameter("company"), request.getParameter("website"), request.getParameter("address"), request.getParameter("country"), request.getParameter("phone"), request.getParameter("fax"), 1, request.getParameter("company_description"));
-        
+        HttpSession session = request.getSession(true);
         EntityManagerFactory entityFactory = Persistence.createEntityManagerFactory("hibernate");
         EntityManager entityManager = entityFactory.createEntityManager();
         //check user_name, email 's exits
@@ -60,8 +61,8 @@ public class Register extends HttpServlet {
         query_email.setParameter("email", user_info.getEmail());
         List result_email = query_email.getResultList();
         
-        
         if (!result_userName.isEmpty()) {
+            session.setAttribute("error_register", request);
             response.getWriter().println("Tài khoản đã tồn tại. Vui lòng chọn tài khoản khác");
         } else if (!result_email.isEmpty()) {
             response.getWriter().println("Email đã được đăng ký");

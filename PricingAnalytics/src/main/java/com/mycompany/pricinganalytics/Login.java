@@ -45,6 +45,7 @@ public class Login extends HttpServlet {
         EntityManager entityManager = entityFactory.createEntityManager();
         String user_name = request.getParameter("user_name");
         String password = request.getParameter("password");
+        //int user_id = 0;
         Query query = entityManager.createQuery("SELECT E FROM UserInfo E WHERE E.user_name = :user_name");
         query.setParameter("user_name", user_name);
         UserInfo user_info = null;
@@ -64,6 +65,7 @@ public class Login extends HttpServlet {
             if(user_info.getPassword().equals(password)){
                 
                 session.setAttribute("user_name", user_name);
+                session.setAttribute("user_id", user_info.getId());
                 response.sendRedirect("usercp.jsp");
                 //response.getWriter().println("Đăng nhập thành công.");
             }
