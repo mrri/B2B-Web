@@ -33,10 +33,7 @@
      <%@include file="header.jsp" %>
      
       <!------------------------ Body ---------------------->
-     
-     
-
-	<div id = "wrapper">		
+	<div id = "wrapper">	
             <div id="slideshow">
                 
 		<div>
