@@ -17,16 +17,19 @@
 	<div id = "wrapper">
             
             <h4>Thêm sản phẩm</h4>
-            <div id="register">
+            <div id="addnewproduct">
                 <form name="register"  action='addnewproduct' method='post'>
+                    Danh mục sản phẩm
+                     <%@include file="category.jsp" %>
                     <table  CELLSPACING="1" WIDTH="500px">
+                        
                         <TR>
-                            <TD WIDTH="52%">Tên sản phẩm</TD>
-                            <TD WIDTH="48%"><input type="text" name="user_name"><br></TD>
+                            <TD WIDTH="33%">Tên sản phẩm</TD>
+                            <TD WIDTH="67%"><input type="text" name="user_name"><br></TD>
                         </TR>
                         <TR>
-                            <TD WIDTH="52%">Thông tin sản phẩm</TD>
-                            <TD WIDTH="48%"> <%@include file="tinymce.html" %><br> </TD>
+                            <TD WIDTH="33%">Thông tin sản phẩm</TD>
+                            <TD WIDTH="67%"> <%@include file="tinymce.html" %><br> </TD>
                         </TR>
                         
                         

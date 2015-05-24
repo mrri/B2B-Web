@@ -13,7 +13,7 @@
         full_name=document.register. full_name;
         email=document.register.email;
         phone=document.register.phone;
-        reg1=/^[0-9A-Za-z]+[0-9A-Za-z_]*@[\w\d.]+.\w{2,4}$/;
+        reg1=/^[0-9A-Za-z]+[0-9A-Za-z_.]*@[\w\d.]+.\w{2,4}$/;
         testmail=reg1.test(email.value);
         if(user_name.value==""){
             alert("Hãy chọn tên đăng nhập");
@@ -22,6 +22,11 @@
         }
         if(password.value==""){
             alert("Chưa nhập mật khẩu");
+            password.focus();
+            return false;
+        }
+        if(password.value.length < 8){
+            alert("Mật khẩu quá ngắn");
             password.focus();
             return false;
         }
