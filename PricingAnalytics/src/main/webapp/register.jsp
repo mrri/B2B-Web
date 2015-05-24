@@ -82,9 +82,14 @@
                     <table  CELLSPACING="1" WIDTH="500px">
                         <TR>
                             <%
-                                 if(user_name=="1")
+                                String error_register =  (String)session.getAttribute("error_register"); 
+                                 if(error_register=="1")
                                  {
-                                     %> <p>Tài khoản hoặc mật khẩu không chính xác</p> <%
+                                     %> <p>Tài khoản đã đăng ký</p> <%
+                                 }
+                                 if(error_register=="2")
+                                 {
+                                     %> <p>Email đã đăng ký</p> <%
                                  }
                             %>
                         </TR>

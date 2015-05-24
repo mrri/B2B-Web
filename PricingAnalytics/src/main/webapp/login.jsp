@@ -42,14 +42,9 @@
                         <tr>
                             <td colspan="3"><strong>Member Login </strong></td>
                             <%
-                                String error_login =  (String)session.getAttribute("error_login"); 
-                                 if(error_login=="1")
+                                 if(user_name=="1")
                                  {
-                                     %> <p>Tài khoản đã đăng ký</p> <%
-                                 }
-                                 if(error_login=="2")
-                                 {
-                                     %> <p>Email đã đăng ký</p> <%
+                                     %> <p>Tài khoản hoặc mật khẩu không chính xác</p> <%
                                  }
                             %>
                         </tr>
