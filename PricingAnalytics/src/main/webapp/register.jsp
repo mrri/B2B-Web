@@ -65,6 +65,12 @@
 <body>
     <!------------------------ Header ---------------------->
       <%@include file="header.jsp" %>
+       <%
+         if(user_name != null)
+         {
+            response.sendRedirect("index.jsp");
+         }
+    %>
      
       <!------------------------ Body ---------------------->
 	<div id = "wrapper">
@@ -74,6 +80,14 @@
           <div id="register">
                <form name="register" method="post" action="register" onsubmit="return checkinput();">
                     <table  CELLSPACING="1" WIDTH="500px">
+                        <TR>
+                            <%
+                                 if(user_name=="1")
+                                 {
+                                     %> <p>Tài khoản hoặc mật khẩu không chính xác</p> <%
+                                 }
+                            %>
+                        </TR>
                         <TR>
                             <TD WIDTH="33%">Tài Khoản*</TD>
                             <TD WIDTH="67%"><input type="text" name="user_name"><br></TD>

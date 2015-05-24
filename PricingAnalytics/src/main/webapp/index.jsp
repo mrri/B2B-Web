@@ -31,12 +31,14 @@
 	
     <!------------------------ Header ---------------------->
      <%@include file="header.jsp" %>
+     
       <!------------------------ Body ---------------------->
      
      
 
 	<div id = "wrapper">		
             <div id="slideshow">
+                
 		<div>
                     <img src="images/slideshow/1.jpg" width="940px" height="240px">
                 </div>

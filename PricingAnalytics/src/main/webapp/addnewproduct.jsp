@@ -4,20 +4,22 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="style.css">
 <title>B2b</title>
-<%--
-    if(user_name!=null||user_name!="1")
-    {
-    response.sendRedirect("index.jsp");
-    }
---%>
+    
+
 </head>
 
 <body>
 	
     <!------------------------ Header ---------------------->
      <%@include file="header.jsp" %>
+    <%
+         if(user_name == null || user_name=="1")
+         {
+            response.sendRedirect("index.jsp");
+         }
+    %>
       <!------------------------ Body ---------------------->
-     
+    
      
 
 	<div id = "wrapper">

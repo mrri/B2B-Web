@@ -10,6 +10,12 @@
 	
     <!------------------------ Header ---------------------->
      <%@include file="header.jsp" %>
+      <%
+         if(user_name == null || user_name=="1")
+         {
+            response.sendRedirect("index.jsp");
+         }
+    %>
       <!------------------------ Body ---------------------->
      <div id="wrapper">
          <div id="user_cp">

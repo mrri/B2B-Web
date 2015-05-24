@@ -71,21 +71,24 @@
 					<!--Khung Account-->
 				<div id="account_box">
                                     <div id="account_box1">
-                                            <%
-                                              String user_name =  (String)session.getAttribute("user_name"); 
-                                                if(user_name!=null||user_name!="1")
-                                                {
-                                                  %>   <font >${sessionScope['user_name']}</font><%
-                                                }
-                                              else
-                                                {
-                                                   %> <a href='login.jsp'>Đăng nhập</a><%
-                                                }
-                                            %>
+                                        <%
+                                            String user_name =  (String)session.getAttribute("user_name"); 
+                                            if(user_name=="1"){
+                                                session.setAttribute("user_name",null);
+                                            }
+                                            if(user_name!=null && user_name!="1")
+                                            {
+                                                 %><font >${sessionScope['user_name']}</font><%
+                                            }
+                                            else
+                                            {
+                                               %> <a href='login.jsp'>Đăng nhập</a><%
+                                            }
+                                        %>                  
                                     </div>
                                     <div id="account_box2">
                                           <%
-                                                if(user_name!=null)
+                                                if(user_name!=null && user_name!="1")
                                                 {
                                                   %>   <a href="logout.jsp">Logout</a><%
                                                 }
