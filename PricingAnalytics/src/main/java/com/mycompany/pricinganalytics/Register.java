@@ -71,6 +71,7 @@ public class Register extends HttpServlet {
             entityManager.getTransaction().commit();
             entityManager.close();
             response.getWriter().println("Đăng ký thành công");
+            response.sendRedirect("login.jsp");
         }
         
     }

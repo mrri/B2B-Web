@@ -54,8 +54,8 @@ public class Login extends HttpServlet {
         else{
             if(user_info.getPassword().equals(password)){
                 HttpSession session = request.getSession(true);
-                session.setAttribute("tendaydu", user_name);
-                response.sendRedirect("index.jsp");
+                session.setAttribute("user_name", user_name);
+                response.sendRedirect("usercp.jsp");
                 //response.getWriter().println("Đăng nhập thành công.");
             }
             else{
