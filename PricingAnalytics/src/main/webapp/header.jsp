@@ -113,34 +113,42 @@
             </script>   
                     
             <div class="danhmucsanpham" id="danhmucsanpham">
-                <ul id="danhmuc1">
+            <div id="danhmuc1">
+                <ul>
                     <li><span>Điện lạnh</span></li>
                     <li >- <a href="http://www.sosanhgia.com/t8-may-giat.html" title="Giá Máy giặt">Máy giặt</a></li>
                     <li >- <a href="http://www.sosanhgia.com/t10-tu-lanh.html" title="Giá Tủ lạnh">Tủ lạnh</a></li>
                     <li >- <a href="http://www.sosanhgia.com/t19-may-lanh-dieu-hoa.html" title="Giá Máy lạnh">Máy lạnh / Điều hoà</a></li>
                     <li>- <a href="http://www.sosanhgia.com/t22-may-nuoc-nong.html" title="Giá Máy nước nóng">Máy nước nóng</a></li>
                 </ul >
-                <ul id="danhmuc2">
+            </div>
+            <div id="danhmuc2">
+                <ul>
                     <li><span>Điện lạnh</span></li>
                     <li >- <a href="http://www.sosanhgia.com/t8-may-giat.html" title="Giá Máy giặt">Máy giặt</a></li>
                     <li >- <a href="http://www.sosanhgia.com/t10-tu-lanh.html" title="Giá Tủ lạnh">Tủ lạnh</a></li>
                     <li >- <a href="http://www.sosanhgia.com/t19-may-lanh-dieu-hoa.html" title="Giá Máy lạnh">Máy lạnh / Điều hoà</a></li>
                     <li>- <a href="http://www.sosanhgia.com/t22-may-nuoc-nong.html" title="Giá Máy nước nóng">Máy nước nóng</a></li>
                 </ul>
-                <ul id="danhmuc3">
+            </div>
+            <div id="danhmuc3">
+                <ul>
                     <li><span>Điện lạnh</span></li>
                     <li >- <a href="http://www.sosanhgia.com/t8-may-giat.html" title="Giá Máy giặt">Máy giặt</a></li>
                     <li >- <a href="http://www.sosanhgia.com/t10-tu-lanh.html" title="Giá Tủ lạnh">Tủ lạnh</a></li>
                     <li >- <a href="http://www.sosanhgia.com/t19-may-lanh-dieu-hoa.html" title="Giá Máy lạnh">Máy lạnh / Điều hoà</a></li>
                     <li>- <a href="http://www.sosanhgia.com/t22-may-nuoc-nong.html" title="Giá Máy nước nóng">Máy nước nóng</a></li>
                 </ul>
-                <ul id="danhmuc4">
+            </div>
+            <div id="danhmuc4">
+                <ul>
                     <li><span>Điện lạnh</span></li>
                     <li >- <a href="http://www.sosanhgia.com/t8-may-giat.html" title="Giá Máy giặt">Máy giặt</a></li>
                     <li >- <a href="http://www.sosanhgia.com/t10-tu-lanh.html" title="Giá Tủ lạnh">Tủ lạnh</a></li>
                     <li >- <a href="http://www.sosanhgia.com/t19-may-lanh-dieu-hoa.html" title="Giá Máy lạnh">Máy lạnh / Điều hoà</a></li>
                     <li>- <a href="http://www.sosanhgia.com/t22-may-nuoc-nong.html" title="Giá Máy nước nóng">Máy nước nóng</a></li>
                 </ul>
+            </div>
                 
                 
             </div>    

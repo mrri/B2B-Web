@@ -122,27 +122,42 @@ body{
 }
 /*end dropmenu*/
 #danhmucsanpham{
-    z-index: 10;
+    z-index: 6;
     width: 960px;
     height: 200px;
     clear: both;
     background: #eeeeee;
+    
+    display: inline-block;
+    text-decoration: none;
+   // -moz-border-radius: 6px;
+   // -webkit-border-radius: 6px;
+    //-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+   // text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+   // border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer
 }
 #danhmuc1{
     float:left;
     width: 240px;
+    
 }
 #danhmuc2{
     float:left;
     width: 240px;
+       
 }
 #danhmuc3{
     float:left;
     width: 240px;
+       
 }
-#danhmuc3{
+#danhmuc4{
     float:left;
     width: 240px;
+       
 }
 
 
@@ -267,24 +282,8 @@ body{
 
 /* show hide*/
 
-detailDiv {
-height:80px;
-       width: 400px;
-background: #222;
-display: inline-block;
-padding: 50px 10px 6px;
-color: #fff;
-text-decoration: none;
--moz-border-radius: 6px;
--webkit-border-radius: 6px;
--moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
--webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
-border-bottom: 1px solid rgba(0,0,0,0.25);
-position: relative;
-cursor: pointer
-font-size: 11px;font-weight: bold;line-height: 1;text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
-background-color: #91bd09;
-text-align:center;
-}
-detailDiv:hover {background-color: #749a02;}
+
+
+
+
+
