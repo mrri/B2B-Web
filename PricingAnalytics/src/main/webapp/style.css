@@ -124,6 +124,14 @@ body{
   visibility: visible;
 }
 /*end dropmenu*/
+#danhmucsanpham{
+    width: 940px;
+    height: 200px;
+    background:red;
+}
+
+
+
 
 #wrapper{
 	width:960px;
