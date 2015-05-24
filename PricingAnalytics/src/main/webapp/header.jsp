@@ -72,20 +72,20 @@
 				<div id="account_box">
                                     <div id="account_box1">
                                           
-                                            <c:if test="${sessionScope['tendaydu']!=null}">
-                                                <b>Xin chào bạn :</b> <h3><font color="red">${sessionScope['tendaydu']}</font></h3>
+                                            <c:if test="${sessionScope['user_name']!=null}">
+                                                <b>Xin chào bạn :</b> <h3><font color="red">${sessionScope['user_name']}</font></h3>
                                             </c:if>
-                                            <c:if test="${sessionScope['tendaydu']==null}">
+                                            <c:if test="${sessionScope['user_name']==null}">
                                                  <a href='login.jsp'>Đăng nhập</a>
                                             </c:if>
                                             
                                     </div>
                                     <div id="account_box2">
                                         
-                                            <c:if test="${sessionScope['tendaydu']!=null}">
+                                            <c:if test="${sessionScope['user_name']!=null}">
                                                 <a href="logoutprocess">Logout</a>
                                             </c:if>
-                                            <c:if test="${sessionScope['tendaydu']==null}">
+                                            <c:if test="${sessionScope['user_name']==null}">
                                                  <a href='register.jsp'>Đăng ký</a>
                                             </c:if>
                                     </div>                                    
