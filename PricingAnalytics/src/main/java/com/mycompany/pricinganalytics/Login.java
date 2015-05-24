@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.servlet.ServletException;
@@ -39,6 +40,7 @@ public class Login extends HttpServlet {
      protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        HttpSession session = request.getSession(true);
         EntityManagerFactory entityFactory = Persistence.createEntityManagerFactory("hibernate");
         EntityManager entityManager = entityFactory.createEntityManager();
         String user_name = request.getParameter("user_name");
@@ -46,20 +48,29 @@ public class Login extends HttpServlet {
         Query query = entityManager.createQuery("SELECT E FROM UserInfo E WHERE E.user_name = :user_name");
         query.setParameter("user_name", user_name);
         UserInfo user_info = null;
-        user_info = (UserInfo) query.getSingleResult();
+        try{
+            user_info = (UserInfo) query.getSingleResult();
+        }
+        catch(NoResultException e){
+        }
+        
         if(user_info == null)
         {
-            response.getWriter().println("Không tìm thấy tài khoản.");
+            //tai khoan khong ton tai
+            session.setAttribute("user_name", "1");
+            response.sendRedirect("login.jsp");
         }
         else{
             if(user_info.getPassword().equals(password)){
-                HttpSession session = request.getSession(true);
+                
                 session.setAttribute("user_name", user_name);
                 response.sendRedirect("usercp.jsp");
                 //response.getWriter().println("Đăng nhập thành công.");
             }
             else{
-                response.getWriter().println("Sai mật khẩu.");
+                //sai mat khau
+                session.setAttribute("user_name", "1");
+                response.sendRedirect("login.jsp");
             }
         }
     }
