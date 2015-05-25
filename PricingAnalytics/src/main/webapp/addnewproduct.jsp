@@ -68,8 +68,8 @@ tinymce.init({
             
             
             <div id="addnewproduct">
-                <h4>Thêm sản phẩm</h4>
-                <form name="addnewproduct"  action="test.jsp" method="post" onsubmit="return checkregister();">
+                <form name="addnewproduct"  action="product_add" method="post" onsubmit="return checkregister();">
+                <h4>Thêm sản phẩm</h4
                      <%@include file="category.jsp"%>
                      <table>
                         <TR>
@@ -83,17 +83,17 @@ tinymce.init({
                         %>
                             
                             <TD WIDTH="33%">Tên sản phẩm</TD>
-                            <TD WIDTH="67%"><input type="text" name="tensanpham"><br></TD>
+                            <TD WIDTH="67%"><input type="text" name="product_name"><br></TD>
                         </TR>
                         <TR>
                             Thông tin sản phẩm</br></br>
                             <form method="post" >
-                                 <textarea name="thongtinsanpham"></textarea>
+                                 <textarea name="product_description"></textarea>
                             </form>
                         </TR>
                         <TR>
                             <TD WIDTH="33%">Giá</TD>
-                            <TD WIDTH="67%"><input type="text" name="price"><br></TD>
+                            <TD WIDTH="67%"><input type="text" name="product_price"><br></TD>
                         </TR>
                         <TR>
                            <!-- <form action="FileUploadServlet" method="post"

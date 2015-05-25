@@ -24,6 +24,7 @@ import javax.servlet.http.HttpSession;
  * @author Quoc Huy Ngo
  */
 public class Login extends HttpServlet {  
+    int id;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -40,12 +41,12 @@ public class Login extends HttpServlet {
      protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        HttpSession session = request.getSession(true);
         EntityManagerFactory entityFactory = Persistence.createEntityManagerFactory("hibernate");
         EntityManager entityManager = entityFactory.createEntityManager();
+        HttpSession session = request.getSession(true);
         String user_name = request.getParameter("user_name");
         String password = request.getParameter("password");
-        //int user_id = 0;
+       
         Query query = entityManager.createQuery("SELECT E FROM UserInfo E WHERE E.user_name = :user_name");
         query.setParameter("user_name", user_name);
         UserInfo user_info = null;
@@ -63,9 +64,8 @@ public class Login extends HttpServlet {
         }
         else{
             if(user_info.getPassword().equals(password)){
-                
                 session.setAttribute("user_name", user_name);
-                session.setAttribute("user_id", user_info.getId());
+                session.setAttribute("user_id", Integer.toString(user_info.getId()));
                 response.sendRedirect("usercp.jsp");
                 //response.getWriter().println("Đăng nhập thành công.");
             }

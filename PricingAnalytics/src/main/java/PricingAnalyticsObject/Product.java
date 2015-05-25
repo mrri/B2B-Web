@@ -1,7 +1,7 @@
 
 package PricingAnalyticsObject;
 
-import java.util.Date;
+import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,15 +11,21 @@ import javax.persistence.Table;
 @Table(name="product")
 public class Product {
     @Id
+    @Column(name = "product_id") 
     int product_id;
+    @Column(name = "user_id") 
     int user_id;
-    String product_category;
+    @Column(name = "product_category") 
+    int product_category;
+    @Column(name = "product_name") 
     String product_name;
-    String date;
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "date") 
+    Date date;
+    @Column(name ="description", columnDefinition = "TEXT")
     String description;
+    @Column(name = "price") 
     String price;
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "image", columnDefinition = "TEXT")
     String image;
 
     public int getProduct_id() {
@@ -38,11 +44,11 @@ public class Product {
         this.user_id = user_id;
     }
 
-    public String getProduct_category() {
+    public int getProduct_category() {
         return product_category;
     }
 
-    public void setProduct_category(String product_category) {
+    public void setProduct_category(int product_category) {
         this.product_category = product_category;
     }
 
@@ -78,20 +84,26 @@ public class Product {
         this.image = image;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
     
     
     public Product(){
-        
+        this.user_id = 0;
+        this.product_name = "admin";
+        this.product_category = 0;
+        this.description = "admin";
+        this.price = "0000";
+        this.image = "";
+        this.date = new Date(2000,01,01);
     }
     
-    public Product(int user_id, String product_category, String product_name, String date,String description, String price, String image){
+    public Product(int user_id, int product_category, String product_name, Date date,String description, String price, String image){
         this.user_id = user_id;
         this.product_category = product_category;
         this.product_name = product_name;
