@@ -18,44 +18,9 @@
     %>--%>
      <!-- Body -->
      <div id="wrapper">
-         <div id="user_cp">
-             <!--<table>
-                 <td>
-                 <th>
-                     Bảng điều khiển
-                 </th>
-                 </td>
-                <td>
-                     <a href="addnewproduct.jsp">Thêm sản phẩm</a></br>
-                     Hồ sơ công ty</br>
-                     Quản lý sản phầm</br>
-                     Quản lý tài khoản</br>
-                     Đăng xuất</br>
-                 </td>
-                 
-             </table>-->
-             
-             <table >
-		<!--Control Panel-->
-		<tr><td bgcolor="#CC0000" height="25" class="trang"  style="padding-left:5px;"><b>CONTROL PANEL</b></td></tr>
-		<tr><td>
-                    <table cellpadding="0" cellspacing="0" width="100%" border="0" style="border:1px solid #CCCCCC; padding:5px;" class="xanh">
-                        <tr><td><img src="images/b1.gif"/> <a href="addnewproduct.jsp">Thêm sản phẩm mới</a></td></tr>
-                        <tr><td><img src="images/b1.gif"/> <a href="product_list.php">Quản lý sản phẩm</a></td></tr>
-                        <tr><td><img src="images/b1.gif"/> <a href="offer_add.php">Thêm tin mua bán</a></td></tr>
-                        <tr><td><img src="images/b1.gif"/> <a href="company_edit.php">Thông tin công ty</a></td></tr>
-                        
-                        <tr><td><img src="images/b1.gif"/> <a href="offer_list.php">Quản lý tin mua bán</a></td></tr>					
-                        <tr><td><img src="images/b1.gif"/> <a href="changepass.php">Đổi password</a></td></tr>
-                        <tr><td><img src="images/b1.gif"/> <a href="member.php">Thông tin tài khoản</a></td></tr>
-                        <tr><td><img src="images/b1.gif"/> <a href="logout.jsp">Đăng xuất</a></td></tr>
-                    </table>					
-		</td></tr>
-	</table>
-         </div>
+        <%@include file="cp_user.jsp" %>
          
-         <div id="aa">
-         </div>
+         
              
      </div>
      

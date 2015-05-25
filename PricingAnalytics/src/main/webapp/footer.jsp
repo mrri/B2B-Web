@@ -8,34 +8,37 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <div id="footer">
+        
             <div id="footcontain">
-                <div id="foot1">
-                 <p>ABOUT</p>
-                </div>
-                
-                <div id="foot2">
-               		 <p> 
-                        <strong>GIÚP ĐỠ VÀ HỖ TRỢ</strong> <br/><br/>
-                        Câu hỏi thường gặp<br/>
-                        Hướng dẫn sử dụng<br/>
-                         </p>
-		</div>
-                
-                <div id="foot3">
-                    <p>   <strong>LIÊN HỆ</strong> <br/>
-					MSC Industrial Supply<br />
-					75 Maxess Road<br />
-					Melville, NY 11747-3151<br />
-					Contact Us | 1-800-645-7270 | Chat<br />
-                </p>
-                    
-		</div>
-                
-                <div id= "foot4">
-                    <p>  © 2000 - 2015 MSC Industrial Direct Co., Inc. All Rights Reserved</p>
-                </div>
+                 <ul>
+        <li><a href=""><strong>About MSC</strong></a></li>
+        <li><a href="">About MSC</a></li>
+		<li><a href="">About MSC</a></li>
+		<li><a href="">About MSC</a></li>
+		<li><a href="">About MSC</a></li>
+        
+    </ul>
+    <ul>
+        <li><a href=""><strong>Dịch vụ</strong></a></li>
+                <li><a href="">Điều khoản sử dụng</a></li>
+		
+       
+    </ul>
+    <ul>
+	 <li><a href=""><strong>Hỗ trợ - Giúp đỡ</strong></a></li>
+        <li><a href="">About MSC</a></li>
+		<li><a href="">Câu hỏi thường gặp</a></li>
+		<li><a href="">Hướng dẫn sử dụng</a></li>
+		<li><a href="">Site Map</a></li>
+    </ul>
+    <ul>
+	 <li><a href=""><strong>Liên hệ</strong></a></li>
+                <li><a href="">Liên Hệ</a></li>
+		<li><a href="">UIT - MMT2012</a></li>
+		<li><a href="">Ngô Quốc Huy</a></li>
+		<li><a href="">Nguyễn Tuấn Anh</a></li>
+     </ul>
             </div>
-       </div>
+       
     </body>
 </html>

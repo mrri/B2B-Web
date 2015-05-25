@@ -64,18 +64,14 @@ tinymce.init({
      
 
 	<div id = "wrapper">
+            <%@include file="cp_user.jsp"%>
             
             <h4>Thêm sản phẩm</h4>
             <div id="addnewproduct">
                 <form name="addnewproduct"  action="addnewproduct" method="post" onsubmit="return checkregister();">
-                    
                      <%@include file="category.jsp"%>
-                    
-                     
-                     
                      <table>
                         <TR>
-                            
                         <%
                         String key = request.getParameter("key");  
                         if(key==null)

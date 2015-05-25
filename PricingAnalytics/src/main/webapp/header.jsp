@@ -49,14 +49,6 @@
                     <div id="dropmenu">
                         <ul>
                             <li class="danhmuc">Danh mục sản phẩm</li>
-                            <li>Danh Mục
-                                    <ul>
-                                            <li>Điện Máy</li>
-                                            <li>Điện Tử</li>
-                                            <li>Gia Dụng</li>
-                                            <li>Kĩ Thuật Số</li>
-                                    </ul>
-                            </li>
                             <li>Sản Phẩm</li>
                             <li>Portfolio
                                     <ul>

@@ -53,12 +53,10 @@
    
         
             <br>
-		<div id="slider2">
-			Danh Mục 1
+		<div id="newproduct">
+			Sản phẩm mới
 		</div>
-		<div id="slider3">
-			Danh Mục 1
-		</div>
+		
 			
 
 

@@ -5,8 +5,8 @@ body{
 }
 #header {
 	width:100%;
-	background:blue;
-	
+	background:#2c5198;
+	border: 1px solid #ccc; 
 }
 #headercontain{
 	width:960px;
@@ -43,11 +43,14 @@ body{
 	float:right;
 }
 #account_box1{
-        
+    
+       
 	width:100px;
 	float:left;
 }
 #account_box2{
+    
+        
 	width:100px;
 	float:right;
 }
@@ -56,15 +59,12 @@ body{
 }
 /* dropmenu */
 #dropmenu ul {
-  
   text-align: left;
   display: inline;
   margin: 0;
   padding: 15px 4px 17px 0;
   list-style: none;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
- // box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+
 }
 #dropmenu ul li {
   font: bold 12px/18px sans-serif;
@@ -73,22 +73,24 @@ body{
   position: relative;
   padding: 15px 20px;
   background: #eeeeee;
+    border-right: 1px solid #ccc; 
   cursor: pointer;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+  //-webkit-transition: all 0.2s;
+ // -moz-transition: all 0.2s;
+ // -ms-transition: all 0.2s;
+  //-o-transition: all 0.2s;
+ // transition: all 0.2s;
 }
 #dropmenu ul li:hover {
   z-index: 6;
-  background: #555;
-  color: #fff;
+
+  background: white;
+  color: black;
 }
 #dropmenu ul li a:hover {
   z-index: 6;
-  background: #555;
-  color: #fff;
+  background: white;
+  color: black;
 }
 #dropmenu ul li ul {
   padding: 0;
@@ -102,17 +104,13 @@ body{
   display: none;
   opacity: 0;
   visibility: hidden;
-  -webkit-transiton: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -ms-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  -transition: opacity 0.2s;
+
 }
 #dropmenu ul li ul li { 
-  background: #555; 
+  background: white; 
   display: block; 
-  color: #fff;
-  text-shadow: 0 -1px 0 #000;
+  color: black;
+ 
 }
 #dropmenu ul li ul li:hover { background: #666; }
 #dropmenu ul li:hover ul {
@@ -126,7 +124,7 @@ body{
     width: 960px;
     height: 200px;
     clear: both;
-    background: #eeeeee;
+    background: white;
     
     display: inline-block;
     text-decoration: none;
@@ -139,28 +137,10 @@ body{
     position: relative;
     cursor: pointer
 }
-#danhmuc1{
-    float:left;
-    width: 240px;
-    
-}
-#danhmuc2{
-    float:left;
-    width: 240px;
-       
-}
-#danhmuc3{
-    float:left;
-    width: 240px;
-       
-}
-#danhmuc4{
-    float:left;
-    width: 240px;
-       
-}
-
-
+#danhmuc1{ float:left; width: 240px;}
+#danhmuc2{ float:left;width: 240px;}
+#danhmuc3{float:left;width: 240px;}
+#danhmuc4{float:left;width: 240px;}
 
 #wrapper{
 	width:960px;
@@ -187,66 +167,39 @@ body{
 #newproduct{
 	width:960px;
 	height: 200px;
-	border: 1px solid red;
-}
-#newproduct table tr{
-   
-    width:960px;
-    background: red;
-}
-#newproduct table td{
-    width:960px;
-    background: green;
-}
-#slider2{
-	width:960px;
-	height: 150px;
-	border: 1px solid red;
-}
-#slider3{
-	width:960px;
-	height: 150px;
-	border: 1px solid red;
+	border: 1px solid #ccc;
+        background: #fefefe;
 }
 
 
 
 
-#footer{
-	clear:both;
-	width:100%;
-	height:150px;
-	background: #2d6dab;
-	color: white;
-	
-	
-}
 #footcontain{
-	width:960px;
-	margin:0px auto;
-}
-#foot1{
-	
-	width:320px;
-	float:left;
-	
-}
-#foot2{
-	
-	width:310px;
-	float:left;
-	
-}
-#foot3{
-	
-	width:320px;
-	float:left;
-	
-}
+     
+    clear: both;
+    height:150px;
+width:960px;
+margin:0px auto;
 
-#foot4{
-	clear:both;
+ overflow:hidden;
+
+ border-top: 1px solid #ccc; 
+
 }
+#footcontain ul{ 
+    float:left;
+    position:relative; 
+  left: 40px;
+    margin-left:0;
+    padding: 0 0 10px 10px; 
+    width: 228px;
+    list-style: none; 
+    height: 84px;
+  
+}
+#footcontain li strong { color: #000; text-transform:uppercase; font-weight:bold; padding-bottom: 3px; display: block;}
+#footcontain li{ line-height:15px;font-size: 13px;margin:0px auto; }
+#footcontain ul li a{ text-decoration:none; color:#000; }
 
 
 /* Login Page */
@@ -272,15 +225,20 @@ body{
 /*Register Page*/
 
 /*Register Page*/
-#user_cp{
+#usercp{
     margin: 10px;
     border: 1px solid black;
     float:left;
-    width:200px;
+    width:206px;
     
 }
 
-/* show hide*/
+/* addnew product*/
+#addnewproduct{
+    width: 680px;
+    float: right;
+     border: 1px solid black;
+}
 
 
 
