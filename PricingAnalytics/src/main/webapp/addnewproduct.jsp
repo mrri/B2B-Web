@@ -78,10 +78,9 @@ tinymce.init({
                             session.setAttribute("keyid", key);
                             if(key==null)
                             {
-                                %>Chưa chọn danh mục sản phẩm </br><%
+                                %><b style="color: red;">Chưa chọn danh mục sản phẩm </b></br><%
                             }
                         %>
-                            
                             <TD WIDTH="33%">Tên sản phẩm</TD>
                             <TD WIDTH="67%"><input type="text" name="product_name"><br></TD>
                         </TR>
