@@ -3,7 +3,47 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="style.css">
-<title>B2b</title>
+            <script type="text/javascript" src="tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea"
+ });
+</script>
+            
+<script language="JavaScript">
+    function checkregister(){
+     
+        tensanpham = document.addnewproduct.tensanpham;
+        thongtinsanpham = document.addnewproduct.thongtinsanpham;
+        gia = document.addnewproduct.gia;
+          
+        if(key==null){
+            alert("Chưa chọn danh mục sản phẩm thật");
+            tensanpham.focus();
+            return false;
+        }
+      
+        if(tensanpham.value==""){
+            alert("Chưa chọn danh mục sản phẩm");
+            tensanpham.focus();
+            return false;
+        }
+        if(thongtinsanpham.value==""){
+            alert("Chưa chọn danh mục sản phẩm");
+            tensanpham.focus();
+            return false;
+        }
+        if(gia.value==""){
+            alert("Chưa chọn danh mục sản phẩm");
+            gia.focus();
+            return false;
+        }
+         
+        else alert('OK, đã nhập đúng dữ liệu');
+        return true;
+    }
+</script>
+
     
 
 </head>
@@ -27,42 +67,61 @@
             
             <h4>Thêm sản phẩm</h4>
             <div id="addnewproduct">
-                <form name="register"  action='addnewproduct' method='post'>
-                    Danh mục sản phẩm
-                     <%@include file="category.jsp" %>
-                    <table  CELLSPACING="1" WIDTH="500px">
-                        
+                <form name="addnewproduct"  action="addnewproduct" method="post" onsubmit="return checkregister();">
+                    
+                     <%@include file="category.jsp"%>
+                    
+                     
+                     
+                     <table>
                         <TR>
+                            
+                        <%
+                        String key = request.getParameter("key");  
+                        if(key==null)
+                        {
+                            %>Chưa chọn danh mục sản phẩm </br><%
+                        }
+                            
+                            
+                        %>
+                            
+                            
                             <TD WIDTH="33%">Tên sản phẩm</TD>
-                            <TD WIDTH="67%"><input type="text" name="user_name"><br></TD>
+                            <TD WIDTH="67%"><input type="text" name="tensanpham"><br></TD>
                         </TR>
                         <TR>
-                            <TD WIDTH="33%">Thông tin sản phẩm</TD>
-                            <TD WIDTH="67%"> <%@include file="tinymce.html" %><br> </TD>
+                            Thông tin sản phẩm</br></br>
+                            <form method="post" name="thongtinsanpham">
+                                 <textarea></textarea>
+                            </form>
                         </TR>
-                        
-                        
-                        
                         <TR>
-                            <center>
-                                <TD><input type="submit" value="Gửi" name="submitregister" ><br> </TD>
-                            </center>
+                            <TD WIDTH="33%">Giá</TD>
+                            <TD WIDTH="67%"><input type="text" name="price"><br></TD>
                         </TR>
-
-                    </table>
+                        <TR>
+                           <!-- <form action="FileUploadServlet" method="post"
+                                 enctype="multipart/form-data">
+                                   <label for="fileName">Select File: </label> <input id="fileName"
+                                   type="file" name="fileName" size="30" /><br /> <input
+                                   type="submit" value="Upload" />
+                            </form>
+                           -->
+                           
+                           <input type="file" name="picture"/>  
+                       
+                        
+                         <TD align="center"><input type="submit" value="Gửi"></TD>
+                        </TR>
+                    
+                     
+                     </table>
+                        
                 </form>
             </div>
 		
     <!-----------------------------------Register Close------------------------------------------>
-            
-            
-		
-
-
-			
-			
-			
-            
 			
 	</div>
       <!------------------------ footer ---------------------->

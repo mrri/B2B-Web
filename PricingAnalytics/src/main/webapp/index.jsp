@@ -29,10 +29,10 @@
 
 <body>
 	
-    <!------------------------ Header ---------------------->
-     <%@include file="header.jsp" %>
+    <!--- Header -->
+    <%@include file="header.jsp" %>
      
-      <!------------------------ Body ---------------------->
+    <!-- Body -->
 	<div id = "wrapper">	
             <div id="slideshow">
                 
@@ -68,7 +68,7 @@
             
 			
 	</div>
-      <!------------------------ footer ---------------------->
+      <!-- footer -->
      <%@include file="footer.jsp" %>
 	</body>
 </html>
