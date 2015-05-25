@@ -62,10 +62,12 @@ public class Register extends HttpServlet {
         List result_email = query_email.getResultList();
         
         if (!result_userName.isEmpty()) {
-            session.setAttribute("error_register", request);
-            response.getWriter().println("Tài khoản đã tồn tại. Vui lòng chọn tài khoản khác");
+            session.setAttribute("error_register", 1);
+            //response.getWriter().println("Tài khoản đã tồn tại. Vui lòng chọn tài khoản khác");
         } else if (!result_email.isEmpty()) {
-            response.getWriter().println("Email đã được đăng ký");
+            //response.getWriter().println("Email đã được đăng ký");
+            session.setAttribute("error_register", 2);
+
         } else {
             entityManager.getTransaction().begin();
             entityManager.persist(user_info);
