@@ -13,9 +13,9 @@
     </head>
     <body>
         <%
-             String key = request.getParameter("key"); 
+             String test =  (String)session.getAttribute("keyid"); 
               String thongtinsanpham = request.getParameter("thongtinsanpham"); 
-              out.print(key);
+              out.print(test);
               out.print(thongtinsanpham);
             %>
             

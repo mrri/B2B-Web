@@ -75,12 +75,12 @@ tinymce.init({
                         <TR>
                         <%
                             String key = request.getParameter("key");  
+                            session.setAttribute("keyid", key);
                             if(key==null)
                             {
                                 %>Chưa chọn danh mục sản phẩm </br><%
                             }
                         %>
-                            
                             
                             <TD WIDTH="33%">Tên sản phẩm</TD>
                             <TD WIDTH="67%"><input type="text" name="tensanpham"><br></TD>
