@@ -226,18 +226,19 @@ margin:0px auto;
 
 /*Register Page*/
 #usercp{
-    margin: 10px;
-    border: 1px solid black;
+    margin-top: 10px;
+    border: 1px solid #ccc;
     float:left;
     width:206px;
     
 }
 
-/* addnew product*/
+/* addnew product page*/
 #addnewproduct{
-    width: 680px;
+    margin-top: 10px;
+    width: 730px;
     float: right;
-     border: 1px solid black;
+     border: 1px solid #ccc;
 }
 
 

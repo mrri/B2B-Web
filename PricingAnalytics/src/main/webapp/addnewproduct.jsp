@@ -66,20 +66,19 @@ tinymce.init({
 	<div id = "wrapper">
             <%@include file="cp_user.jsp"%>
             
-            <h4>Thêm sản phẩm</h4>
+            
             <div id="addnewproduct">
-                <form name="addnewproduct"  action="addnewproduct" method="post" onsubmit="return checkregister();">
+                <h4>Thêm sản phẩm</h4>
+                <form name="addnewproduct"  action="test.jsp" method="post" onsubmit="return checkregister();">
                      <%@include file="category.jsp"%>
                      <table>
                         <TR>
                         <%
-                        String key = request.getParameter("key");  
-                        if(key==null)
-                        {
-                            %>Chưa chọn danh mục sản phẩm </br><%
-                        }
-                            
-                            
+                            String key = request.getParameter("key");  
+                            if(key==null)
+                            {
+                                %>Chưa chọn danh mục sản phẩm </br><%
+                            }
                         %>
                             
                             
@@ -88,8 +87,8 @@ tinymce.init({
                         </TR>
                         <TR>
                             Thông tin sản phẩm</br></br>
-                            <form method="post" name="thongtinsanpham">
-                                 <textarea></textarea>
+                            <form method="post" >
+                                 <textarea name="thongtinsanpham"></textarea>
                             </form>
                         </TR>
                         <TR>
@@ -118,6 +117,7 @@ tinymce.init({
             </div>
 		
     <!-----------------------------------Register Close------------------------------------------>
+   
 			
 	</div>
       <!------------------------ footer ---------------------->

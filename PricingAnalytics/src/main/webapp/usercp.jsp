@@ -18,7 +18,12 @@
     %>--%>
      <!-- Body -->
      <div id="wrapper">
-        <%@include file="cp_user.jsp" %>
+         <%
+         
+         %>
+         
+        <%@include file="cp_user.jsp"%>
+       
          
          
              
