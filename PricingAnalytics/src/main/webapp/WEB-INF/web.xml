@@ -19,6 +19,14 @@
         <servlet-name>ProductAdd</servlet-name>
         <servlet-class>com.mycompany.pricinganalytics.ProductAdd</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoadProduct</servlet-name>
+        <servlet-class>com.mycompany.pricinganalytics.LoadProduct</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductManager</servlet-name>
+        <servlet-class>com.mycompany.pricinganalytics.ProductManager</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Register</servlet-name>
         <url-pattern>/register</url-pattern>
@@ -34,6 +42,14 @@
     <servlet-mapping>
         <servlet-name>ProductAdd</servlet-name>
         <url-pattern>/product_add</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoadProduct</servlet-name>
+        <url-pattern>/product</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductManager</servlet-name>
+        <url-pattern>/product_manager</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
