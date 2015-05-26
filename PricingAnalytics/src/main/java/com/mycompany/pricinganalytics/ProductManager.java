@@ -31,7 +31,10 @@ public class ProductManager extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession(true);
-        int user_id = (int) session.getAttribute("user_id");
+        String id = (String) session.getAttribute("user_id");
+        int user_id = 0;
+        if(id != null)
+           user_id = Integer.parseInt(id);
         EntityManagerFactory entityFactory = Persistence.createEntityManagerFactory("hibernate");
         EntityManager entityManager = entityFactory.createEntityManager();
         List<Product> listProduct  = null;//new ArrayList<Product>();
