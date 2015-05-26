@@ -58,10 +58,10 @@
                             <td>:</td>
                             <td><input name="password" type="password" id="password"></td>
                         </tr>
-
+                        
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
                             <td><input type="submit" name="Submit" value="Login"></td>
                         </tr>
                     </table>

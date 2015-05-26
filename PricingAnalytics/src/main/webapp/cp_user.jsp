@@ -24,7 +24,7 @@
                         
                         <tr><td><img src="images/b1.gif"/> <a href="offer_list.php">Quản lý tin mua bán</a></td></tr>					
                         <tr><td><img src="images/b1.gif"/> <a href="changepass.php">Đổi password</a></td></tr>
-                        <tr><td><img src="images/b1.gif"/> <a href="member.php">Thông tin tài khoản</a></td></tr>
+                        <tr><td><img src="images/b1.gif"/> <a href="usercp.jsp">Thông tin tài khoản</a></td></tr>
                         <tr><td><img src="images/b1.gif"/> <a href="logout.jsp">Đăng xuất</a></td></tr>
                     </table>					
 		</td></tr>

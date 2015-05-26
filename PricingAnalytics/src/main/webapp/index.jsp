@@ -49,13 +49,11 @@
                      <img src="images/slideshow/4.jpg" width="940px" height="240px">
                 </div>
             </div>
-            
-   
-        
             <br>
-		<div id="newproduct">
-			Sản phẩm mới
-		</div>
+                 <%@include file="newproduct.jsp" %>  
+                 
+                 <%@include file="chart.jsp" %>  
+		
 		
 			
 

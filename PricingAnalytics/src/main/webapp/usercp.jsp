@@ -19,10 +19,20 @@
      <!-- Body -->
      <div id="wrapper">
          <%
-         
+          
+            if(user_name=="admin"){
+                 
+                %> <%@include file="cp_admin.jsp"%> <%
+                
+            }
+            if(user_name!="admin")
+            {
+                %><%@include file="cp_user.jsp"%><%
+            }
          %>
-         
-        <%@include file="cp_user.jsp"%>
+         ${user_name}
+         <%@include file="account_info.jsp"%>
+       
        
          
          

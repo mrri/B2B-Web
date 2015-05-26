@@ -46,7 +46,7 @@ public class LoadProduct extends HttpServlet {
         }
         else{
             request.setAttribute("productList", listProduct);
-            request.getRequestDispatcher("/newproduct.jsp").forward(request, response);
+          //  request.getRequestDispatcher("/newproduct.jsp").forward(request, response);
         }
     }
 

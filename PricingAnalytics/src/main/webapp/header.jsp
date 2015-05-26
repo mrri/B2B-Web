@@ -72,7 +72,7 @@
                                 }
                                 if(user_name!=null && user_name!="1")
                                 {
-                                     %><b>${sessionScope['user_name']}</b><%
+                                     %><b><a href='usercp.jsp'>${sessionScope['user_name']}</a></b><%
                                 }
                                 else
                                 {
@@ -84,7 +84,7 @@
                               <%
                                     if(user_name!=null && user_name!="1")
                                     {
-                                        %><b><a href="logout.jsp">Logout</a></b><%
+                                        %><b><a href="logout.jsp">Đăng xuất</a></b><%
                                     }
                                   else
                                     {

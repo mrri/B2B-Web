@@ -13,8 +13,10 @@
             full_name=document.register. full_name;
             email=document.register.email;
             phone=document.register.phone;
+            terms=document.register.terms;
             reg1=/^[0-9A-Za-z]+[0-9A-Za-z_.]*@[\w\d.]+.\w{2,4}$/;
             testmail=reg1.test(email.value);
+          
             if(user_name.value==""){
                 alert("Hãy chọn tên đăng nhập");
                 user_name.focus();
@@ -56,6 +58,11 @@
                 phone.focus();
                 return false;
             }
+            if (!terms.checked){
+              alert("Bạn phải đồng ý điều khoản sử dụng");
+                terms.focus();
+              return false;
+          }
             else alert('OK, đã nhập đúng dữ liệu');
             return true;
         }
@@ -105,55 +112,57 @@
                             <TD WIDTH="150"><input type="text" name="user_name"><br></TD>
                         </TR>
                         <TR>
-                            <TD WIDTH="200">Mật Khẩu*</TD>
-                            <TD WIDTH="67"><input type="password" name="password"><br> </TD>
+                            <TD>Mật Khẩu*</TD>
+                            <TD><input type="password" name="password"><br> </TD>
                         </TR>
                         <TR>
-                            <TD WIDTH="200">Xác Nhận Mật Khẩu*</TD>
+                            <TD>Xác Nhận Mật Khẩu*</TD>
                             <TD><input type="password" name="comfirm_password"><br> </TD>
                         </TR>
                         <TR>
-                            <TD WIDTH="200">Email*</TD>
-                            <TD WIDTH="67"><input type="text" name="email"><br> </TD>
+                            <TD>Email*</TD>
+                            <TD><input type="text" name="email"><br> </TD>
                         </TR>
                         <TR>
-                            <TD WIDTH="200">Họ Tên*</TD>
-                            <TD WIDTH="67"><input type="text" name="full_name"><br> </TD>
+                            <TD>Họ Tên*</TD>
+                            <TD ><input type="text" name="full_name"><br> </TD>
                         </TR>
                         <TR>
-                            <TD WIDTH="200">Công ty</TD>
-                            <TD WIDTH="200"><input type="text" name="company"><br> </TD>
+                            <TD>Công ty</TD>
+                            <TD><input type="text" name="company"><br> </TD>
                         </TR>
                         <TR>
-                            <TD WIDTH="200">Địa chỉ</TD>
-                            <TD WIDTH="67"><input type="text" name="address"><br> </TD>
-                        </TR>
-
-                        <TR>
-                            <TD WIDTH="200">Quốc gia</TD>
-                            <TD WIDTH="67"><input type="text" name="country"><br> </TD>
+                            <TD>Địa chỉ</TD>
+                            <TD><input type="text" name="address"><br> </TD>
                         </TR>
 
                         <TR>
-                            <TD WIDTH="200">Điện thoại</TD>
-                            <TD WIDTH="67"><input type="text" name="phone"><br> </TD>
-                        </TR>
-                        <TR>
-                                <TD WIDTH="200">Fax</TD>
-                                <TD WIDTH="67"><input type="text" name="fax"><br> </TD>
-                        </TR>
-                        <TR>
-                                <TD WIDTH="200">Website</TD>
-                                <TD WIDTH="67"><input type="text" name="website"><br> </TD>
+                            <TD>Quốc gia</TD>
+                            <TD><input type="text" name="country"><br> </TD>
                         </TR>
 
                         <TR>
-                                <TD WIDTH="200" >Giới thiệu công ty</TD>
-                                <TD WIDTH="67"><input type="text" name="company_description"><br> </TD>
+                            <TD>Điện thoại</TD>
+                            <TD><input type="text" name="phone"><br> </TD>
+                        </TR>
+                        <TR>
+                                <TD>Fax</TD>
+                                <TD><input type="text" name="fax"><br> </TD>
+                        </TR>
+                        <TR>
+                                <TD>Website</TD>
+                                <TD><input type="text" name="website"><br> </TD>
+                        </TR>
+
+                        <TR>
+                                <TD>Giới thiệu công ty</TD>
+                                <TD><input type="text" name="company_description"><br> </TD>
                         </TR>
                         <TR>
                                 
-                                <TD WIDTH="67"><input type="checkbox" value="Tôi đồng ý" name="company_description"><br> </TD>
+                            <td> 
+                                <p><input type="checkbox" name="terms"> I accept the <u>Terms and Conditions</u></p>
+                            </td>
                         </TR>
                         <TR>
                                  <TD align="center"><input type="submit" value="Đăng ký"></TD>
