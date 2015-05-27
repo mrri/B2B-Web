@@ -6,6 +6,8 @@
 package com.mycompany.pricinganalytics;
 
 import PricingAnalyticsObject.Product;
+import PricingAnalyticsObject.UserInfo;
+import com.sun.corba.se.spi.presentation.rmi.StubAdapter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -29,7 +31,7 @@ public class ProductDetail extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String id = request.getParameter("product_id");
+        String id = request.getParameter("item");
         int product_id = 0;
         if(id != null)
             product_id = Integer.parseInt(id);
@@ -44,16 +46,17 @@ public class ProductDetail extends HttpServlet {
             response.getWriter().println("Khong tim thay san pham");
         }
         if(product != null){
-            Query query_suplier = entityManager.createQuery("SELECT E.company_name, E.phone FROM UserInfo E WHERE E.user_id= :id", Object[].class);
+            Query query_suplier = entityManager.createQuery("SELECT E FROM UserInfo E WHERE E.user_id= :id", Object[].class);
             query_suplier.setParameter("id", product.getUser_id());
-            List<Object[]> results = query_suplier.getResultList();
-            for(Object[] result:results ){
-                response.getWriter().println("Company name: " + result[0] + " Phone: " + result[1]);
+            UserInfo supplier = (UserInfo) query_suplier.getSingleResult();
+            request.setAttribute("error", 0);
+            request.setAttribute("product", product);
+            request.setAttribute("supplier", supplier);
+            //response.getWriter().println("Company name: " + result[0] + " Phone: " + result[1]);
             }
-            response.getWriter().println(product.getProduct_name() + "    " + product.getPrice());
-        }
+            //response.getWriter().println(product.getProduct_name() + "    " + product.getPrice());
         else{
-            response.getWriter().println("Khong tim thay san pham");
+            request.setAttribute("error", 1);
         }
     }
 
