@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 <title>B2b</title>
 
-<script language="JavaScript">
+ <script language="JavaScript">
     function checkinput(){
         user_name=document.login.user_name;
         password=document.login.password;
@@ -32,7 +32,7 @@
     <%@include file="header.jsp" %>
     <!------------------------ Body ---------------------->
 	<div id = "wrapper">
-			
+            <div id="loginpage">		
 			  <!--------------------Login open ---------------->
 	<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
             <form name="login" method="post" action="login" onsubmit="return checkinput();">
@@ -68,11 +68,8 @@
                 </td>
             </form>
 		
-	</table>
-   <!--------------------Login close ---------------->
-			
-            
-			
+	</table>		
+        </div>
 	</div>
     <!------------------------ footer ---------------------->
     <%@include file="footer.jsp" %>

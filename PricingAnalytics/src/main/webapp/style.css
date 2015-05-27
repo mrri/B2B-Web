@@ -1,4 +1,8 @@
 /*Home Page*/
+html, body {
+           height: 100%;
+ 
+}
 body{
 	margin:0;
 	padding:0;
@@ -75,11 +79,7 @@ body{
   background: #eeeeee;
     border-right: 1px solid #ccc; 
   cursor: pointer;
-  //-webkit-transition: all 0.2s;
- // -moz-transition: all 0.2s;
- // -ms-transition: all 0.2s;
-  //-o-transition: all 0.2s;
- // transition: all 0.2s;
+
 }
 #dropmenu ul li:hover {
   z-index: 6;
@@ -144,7 +144,12 @@ body{
 
 #wrapper{
 	width:960px;
+        min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -950px; 
 	margin: 0 auto;
+        border: 2px solid blue;
+
 	//height:900px;
 	
 }
@@ -184,14 +189,13 @@ body{
 }
 
 #footcontain{
-     
     clear: both;
     height:150px;
 width:960px;
 margin:0px auto;
 
  overflow:hidden;
-
+border: 1px solid red;
  border-top: 1px solid #ccc; 
 
 }
@@ -215,11 +219,8 @@ margin:0px auto;
 
 #loginpage{
 	
-	width:500px;
-	height:200px;
 	margin: 0 auto;
-	background:yellow;
-	
+        margin-top: 40px;
 }
 #user{
 	width:500px;
@@ -271,5 +272,28 @@ margin:0px auto;
 }
 */
 
-
-
+/*product detail page*/
+#product_images{
+    width: 450px;
+     border: 1px solid red;  
+     float:left;
+}
+#product_detail0{
+    width: 500px;
+    border: 1px solid red;  
+   height: 100px;
+   float:right;
+}
+#product_contact{
+   width: 500px; 
+   border: 1px solid red;  
+   float:right;
+}
+#product_detail{
+    width: 960px;
+    border: 1px solid red;  
+    clear: both;
+}
+#product_similar{
+    height:150px;
+}

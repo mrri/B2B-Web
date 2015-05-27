@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <c:import url="/product" />
+        <c:import url="/product_manager" />
     </head>
     <body>
         <%@include file="header.jsp" %>

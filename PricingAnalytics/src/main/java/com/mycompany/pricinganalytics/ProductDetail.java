@@ -46,7 +46,7 @@ public class ProductDetail extends HttpServlet {
             response.getWriter().println("Khong tim thay san pham");
         }
         if(product != null){
-            Query query_suplier = entityManager.createQuery("SELECT E FROM UserInfo E WHERE E.user_id= :id", Object[].class);
+            Query query_suplier = entityManager.createQuery("SELECT E FROM UserInfo E WHERE E.user_id= :id");
             query_suplier.setParameter("id", product.getUser_id());
             UserInfo supplier = (UserInfo) query_suplier.getSingleResult();
             request.setAttribute("error", 0);

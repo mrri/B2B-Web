@@ -14,8 +14,63 @@
     
     <!-- popup login-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
-
-
+<script>
+$(document).ready(function() {
+    $(".popup").hide();
+ 
+    $("#button1").click(function(e) {
+        openPopup();
+    });
+ 
+    $(".close").click(function (e) {
+        closePopup();
+        e.preventDefault();
+    });
+ 
+    $("#background").click(function () {
+        closePopup();
+    });
+ 
+});
+ 
+function openPopup(){
+    var dheight = document.body.clientHeight;
+    var dwidth = document.body.clientWidth;
+ 
+    $("#background").width(dwidth).height(dheight);
+ 
+    $("#background").fadeTo("slow",0.8);
+ 
+    var $popup1=$("#popup1");
+    $popup1.css("top", (dheight-$popup1.height())/2);
+    $popup1.css("left",(dwidth-$popup1.width())/2);
+ 
+    $popup1.fadeIn();
+}
+function closePopup(){
+    $("#background").fadeOut();
+    $(".popup").hide();
+}
+</script>
+<style>
+.popup{
+    position: absolute;
+    background: white;
+    border: 1px solid gray;
+    z-index: 10000;
+    box-shadow: 3px 3px gray;
+}
+#background{
+    position: absolute;
+    background: gray;
+    left: 0px;
+    top: 0px;
+}
+a.close{
+    text-decoration: none;
+    float: right;
+}
+</style>
     
     </head>
     <body>
@@ -102,7 +157,23 @@
                     </div>
                         
                         
-                        
+                        <!--popup login-->
+                        <b id="button1">Đăng nhap</b>
+                       
+ 
+<!-- POPUP CONTENT -->
+<div id="popup1" class="popup" style="width:300px;height:200px;">
+<div style="background:lavender;">Title<a href="#" class="close"/>x</a></div>
+<div align="center" style="margin-top:20px">
+	<%@include file="loginbox.jsp" %>
+</div>
+</div>
+<!-- END POPUP CONTENT -->
+</div>
+ 
+<div id="background"></div>
+
+<!--end popup login-->            
 
                         
         <!--Script hien thi danh mục -->

@@ -19,8 +19,8 @@
             <table>
                 <tr>
                     <c:forEach items="${requestScope.productList}" var="Product"  end="5">
-                        
-                        <td><img src="http://the-gadgeteer.com/wp-content/uploads/2015/02/dell-xps13-150x150.jpg"></td>
+                                     
+                        <td><a href="productdetail.jsp?item=${Product.product_id}"><img src="http://the-gadgeteer.com/wp-content/uploads/2015/02/dell-xps13-150x150.jpg"></a></td>
                     </c:forEach>
                 </tr>
                 <tr id="images">
@@ -34,7 +34,7 @@
                 <tr>
                     <c:forEach items="${requestScope.productList}" var="Product"  begin ="5" end="10">
                         
-                        <td><img src="http://the-gadgeteer.com/wp-content/uploads/2015/02/dell-xps13-150x150.jpg"></td>
+                        <td><a href="productdetail.jsp?item=${Product.product_id}"><img src="http://the-gadgeteer.com/wp-content/uploads/2015/02/dell-xps13-150x150.jpg"></a></td>
                     </c:forEach>
                 </tr>
                 <tr id="images">
@@ -43,8 +43,6 @@
                     </c:forEach>
                 </tr>
             </table>
-            
-            
             
         </div>
              
