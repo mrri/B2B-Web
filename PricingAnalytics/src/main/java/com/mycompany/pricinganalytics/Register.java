@@ -5,6 +5,7 @@
  */
 package com.mycompany.pricinganalytics;
 
+import PricingAnalyticsObject.MD5;
 import PricingAnalyticsObject.UserInfo;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -47,7 +48,7 @@ public class Register extends HttpServlet {
             throws ServletException, IOException {
 
         response.setContentType("text/html;charset=UTF-8");
-        UserInfo user_info = new UserInfo(request.getParameter("user_name"), request.getParameter("password"), request.getParameter("email"), request.getParameter("full_name"), request.getParameter("company"), request.getParameter("website"), request.getParameter("address"), request.getParameter("country"), request.getParameter("phone"), request.getParameter("fax"), 1, request.getParameter("company_description"));
+        UserInfo user_info = new UserInfo(request.getParameter("user_name"), MD5.getMD5(request.getParameter("password")), request.getParameter("email"), request.getParameter("full_name"), request.getParameter("company"), request.getParameter("website"), request.getParameter("address"), request.getParameter("country"), request.getParameter("phone"), request.getParameter("fax"), 1, request.getParameter("company_description"));
         HttpSession session = request.getSession(true);
         EntityManagerFactory entityFactory = Persistence.createEntityManagerFactory("hibernate");
         EntityManager entityManager = entityFactory.createEntityManager();

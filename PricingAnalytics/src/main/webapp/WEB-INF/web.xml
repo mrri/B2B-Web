@@ -31,6 +31,10 @@
         <servlet-name>ProductDetail</servlet-name>
         <servlet-class>com.mycompany.pricinganalytics.ProductDetail</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProductEdit</servlet-name>
+        <servlet-class>com.mycompany.pricinganalytics.ProductEdit</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Register</servlet-name>
         <url-pattern>/register</url-pattern>
@@ -58,6 +62,10 @@
     <servlet-mapping>
         <servlet-name>ProductDetail</servlet-name>
         <url-pattern>/product_detail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductEdit</servlet-name>
+        <url-pattern>/product_edit</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

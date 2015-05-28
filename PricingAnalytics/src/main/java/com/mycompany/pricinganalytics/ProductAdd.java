@@ -55,7 +55,7 @@ public class ProductAdd extends HttpServlet {
         entityManager.persist(product);
         entityManager.getTransaction().commit();
         entityManager.close();
-        response.sendRedirect("manager_product.jsp");
+        response.sendRedirect("manage_product.jsp");
     }
 
     @Override

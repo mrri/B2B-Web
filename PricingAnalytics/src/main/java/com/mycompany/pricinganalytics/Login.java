@@ -5,6 +5,7 @@
  */
 package com.mycompany.pricinganalytics;
 
+import PricingAnalyticsObject.MD5;
 import PricingAnalyticsObject.UserInfo;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -63,7 +64,7 @@ public class Login extends HttpServlet {
             response.sendRedirect("login.jsp");
         }
         else{
-            if(user_info.getPassword().equals(password)){
+            if(user_info.getPassword().equals(MD5.getMD5(password))){
                 session.setAttribute("user_name", user_name);
                 session.setAttribute("user_id", Integer.toString(user_info.getId()));
                 response.sendRedirect("usercp.jsp");
