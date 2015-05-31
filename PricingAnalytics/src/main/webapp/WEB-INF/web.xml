@@ -35,6 +35,14 @@
         <servlet-name>ProductEdit</servlet-name>
         <servlet-class>com.mycompany.pricinganalytics.ProductEdit</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CustomerSendMessage</servlet-name>
+        <servlet-class>com.mycompany.pricinganalytics.CustomerSendMessage</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MessageManager</servlet-name>
+        <servlet-class>com.mycompany.pricinganalytics.MessageManager</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Register</servlet-name>
         <url-pattern>/register</url-pattern>
@@ -66,6 +74,14 @@
     <servlet-mapping>
         <servlet-name>ProductEdit</servlet-name>
         <url-pattern>/product_edit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustomerSendMessage</servlet-name>
+        <url-pattern>/message</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MessageManager</servlet-name>
+        <url-pattern>/message_manager</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

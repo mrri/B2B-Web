@@ -5,15 +5,18 @@
  */
 package com.mycompany.pricinganalytics;
 
+import PricingAnalyticsObject.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class ProductEdit extends HttpServlet {
 
@@ -21,15 +24,40 @@ public class ProductEdit extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String code = request.getParameter("edit_code");
-        String id = request.getParameter("item");
+        String item_id = request.getParameter("item");
         int edit_code = 0;
         int product_id = 0;
         if(code != null)
            edit_code = Integer.parseInt(code);
-        if(id != null)
-            product_id = Integer.parseInt(id);
-        EntityManagerFactory entityFactory = Persistence.createEntityManagerFactory("hibernate");
-        EntityManager entityManager = entityFactory.createEntityManager();
+        if(item_id != null)
+            product_id = Integer.parseInt(item_id);
+        HttpSession session = request.getSession(true);
+        String id_user = (String)session.getAttribute("user_id");
+        int user_id = 0;
+        if(id_user != null);
+            user_id = Integer.parseInt(id_user);
+        if(user_id != 0){
+            EntityManagerFactory entityFactory = Persistence.createEntityManagerFactory("hibernate");
+            EntityManager entityManager = entityFactory.createEntityManager();
+            Product product = entityManager.find(Product.class, product_id);
+            //neu la san pham cua user do
+            if(product.getUser_id() == user_id){
+                if(edit_code == 1){
+                    
+                    entityManager.getTransaction().begin();
+                    entityManager.remove(product);
+                    entityManager.getTransaction().commit();
+                    response.getWriter().println("Xoa thanh cong");
+                }
+                else{
+                    
+                }
+                    
+            }
+        }
+        else{
+            response.getWriter().println("Đăng nhập");
+        }
         
         
     }
