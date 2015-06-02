@@ -72,7 +72,8 @@ public class ProductManager extends HttpServlet {
                         entityManager.getTransaction().begin();
                         entityManager.remove(product);
                         entityManager.getTransaction().commit();
-                        response.getWriter().println("Xoa thanh cong");
+                        request.getRequestDispatcher("manage_product.jsp").forward(request, response);
+                        //response.getWriter().println("Xoa thanh cong");
                     } else {
 
                     }
