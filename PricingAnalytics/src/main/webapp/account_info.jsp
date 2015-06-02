@@ -13,7 +13,10 @@
     </head>
     <body>
         <div id="account_info">
-             <table>
+             <table> 
+                 <tr>
+                     <th>Thông tin tài khoản</th> 
+                 </tr>
                 <TR>
                     <TD WIDTH="200">Tài Khoản*</TD>
                     <TD WIDTH="150"><input type="text" name="user_name"><br></TD>
@@ -64,6 +67,9 @@
                 <TR>
                         <TD WIDTH="200" >Giới thiệu công ty</TD>
                         <TD WIDTH="67"><input type="text" name="company_description"><br> </TD>
+                </TR>
+                <TR>
+                        <TD align="center"><input type="submit" value="Cập nhật"></TD>
                 </TR>
             </table>
          </div>

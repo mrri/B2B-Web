@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <div id="admincp">
+        <div id="cp_admin">
              <table >
 		<!--Control Panel-->
 		<tr><td bgcolor="#CC0000"><b>CONTROL PANEL</b></td></tr>

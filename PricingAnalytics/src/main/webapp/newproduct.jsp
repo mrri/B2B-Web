@@ -15,8 +15,26 @@
     </head>
     <body>
         <div id="newproduct">
-            Sản phẩm mới
-            <table>
+            <div id="newproduct_title">
+                <div id="newproduct_title1">
+                    <Strong style="line-height: 25px;">Sản phẩm mới</Strong> <br>
+                </div>
+                <div id="newproduct_title2">
+                    <Strong style="line-height: 25px;">| Danh mục :</Strong> 
+                    <select>
+                         <option value="volvo">Tất cả</option>
+                         <option value="saab">Điện máy</option>
+                         <option value="opel">Điện tử</option>
+                         <option value="audi">Gia dụng</option>
+                         <option value="audi">Kỹ thuật số</option>
+                    </select>
+                </div>
+                
+                <div id="newproduct_title3">
+                    <Strong style="line-height: 25px;">| Tất cả sản phẩm</Strong> <br>
+                </div>
+            </div>
+            <table style="margin-left: 10px; margin-right: 10px;">
                 <tr>
                     <c:forEach items="${requestScope.productList}" var="Product"  end="5">
                                      
@@ -25,10 +43,10 @@
                 </tr>
                 <tr id="images">
                     <c:forEach items="${requestScope.productList}" var="Product"  end="5">
-                        <td><center>${Product.product_name}</center></td>
+                        <td><center><a href="productdetail.jsp?item=${Product.product_id}">${Product.product_name}</a></center></td>
                     </c:forEach>
                 </tr>
-            </table>
+            </table style="margin-left: 10px; margin-right: 10px;">
             <!--Table 2-->
              <table>
                 <tr>
@@ -39,7 +57,7 @@
                 </tr>
                 <tr id="images">
                     <c:forEach items="${requestScope.productList}" var="Product" begin ="5" end="10">
-                        <td><center>${Product.product_name}</center></td>
+                        <td><center><a href="productdetail.jsp?item=${Product.product_id}">${Product.product_name}</a></center></td>
                     </c:forEach>
                 </tr>
             </table>

@@ -36,14 +36,14 @@
          if(test != test2)
          {
              
-                %> <%@include file="cp_user.jsp"%><%
+                %> <%@include file="cp_admin.jsp"%><%
          }
          %>
           
-         <%@include file="account_info.jsp"%>
-       
-       
          
+       
+       
+         <%@include file="analytics.jsp" %>  
          
              
      </div>

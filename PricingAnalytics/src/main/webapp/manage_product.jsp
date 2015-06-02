@@ -10,15 +10,14 @@
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
         <c:import url="/product_manager" />
     </head>
     <body>
         <%@include file="header.jsp" %>
         <div id = "wrapper">
             <%@include file="cp_user.jsp" %>
-            
             <div id="manager_product">
+                
                 <table style="width:100%">
                     <tr>
                         <th>STT</th>
@@ -31,10 +30,12 @@
                             <td>${counter.count}</td>
                             <td>${Product.product_name}</td>
                             <td></td>
-                            <td>Làm mới || Chỉnh sửa || Xóa</td>
+                            <td>Làm mới || <a  href="manage_product.jsp?item=${Product.product_id}&edit_code=2">Chỉnh sửa</a> || <a  href="manage_product.jsp?item=${Product.product_id}&edit_code=1">Xóa</a></td>
                         </tr>
                     </c:forEach>
                 </table>
+                
+               
             </div>
             
             

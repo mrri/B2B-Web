@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-         <div id="usercp">
+         <div id="cp_user">
              <table >
 		<!--Control Panel-->
 		<tr><td bgcolor="#CC0000"><b>CONTROL PANEL</b></td></tr>
@@ -19,7 +19,7 @@
                     <table  style="border:1px solid #CCCCCC; padding:5px; width: 200px;">
                         <tr><td><img src="images/b1.gif"/> <a href="addnewproduct.jsp">Thêm sản phẩm mới</a></td></tr>
                         <tr><td><img src="images/b1.gif"/> <a href="manage_product.jsp">Quản lý sản phẩm</a></td></tr>
-                        <tr><td><img src="images/b1.gif"/> <a href="offer_add.php">Thêm tin mua bán</a></td></tr>
+                        <tr><td><img src="images/b1.gif"/> <a href="message.jsp">Hộp thư</a></td></tr>
                         <tr><td><img src="images/b1.gif"/> <a href="company_edit.php">Thông tin công ty</a></td></tr>
                         
                         <tr><td><img src="images/b1.gif"/> <a href="offer_list.php">Quản lý tin mua bán</a></td></tr>					

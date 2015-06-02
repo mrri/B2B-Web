@@ -17,11 +17,16 @@
         <%@include file="header.jsp" %>
         
         <div id="wrapper">
+            
+           
+         
+            <div>
             <div id="product_images">
-                <img src="http://www.acevn.com/mydata/photo_large/tuananh20150523173037673.png" width="450">
+                
+                <img src="http://www.acevn.com/mydata/photo_large/tuananh20150526130116350.jpg" width="400" height="300">
             </div>
             <div id="product_detail0">
-                ${error}
+                
                 <table>
                     
                     <tr>
@@ -50,7 +55,7 @@
                 </table>
             </div>
             <div id="product_contact">
-                <form name="register" method="post" action="register" onsubmit="return checkinput();">
+                <form name="message" method="post" action="message" onsubmit="return checkinput();">
                 <table>
                         
                         <TR>
@@ -87,6 +92,7 @@
                     </table>
                 </form>
             </div>
+        </div>
             
             <div id="product_detail">
                 ${product.description}
@@ -97,7 +103,7 @@
             </div>
             
         </div>
-        
+              
         
         <%@include file="footer.jsp" %>
     </body>

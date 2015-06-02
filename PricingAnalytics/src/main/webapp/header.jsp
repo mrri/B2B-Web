@@ -73,13 +73,14 @@
                         <div id="account_box1">
                             <%
                                 String user_name =  (String)session.getAttribute("user_name"); 
-                              String user_id = (String) session.getAttribute("user_id");
+                                String user_id = (String) session.getAttribute("user_id");
                                 if(user_name=="1"){
                                     session.setAttribute("user_name",null);
                                 }
+                                  
                                 if(user_name!=null && user_name!="1")
                                 {
-                                     %><b><a href='usercp.jsp'>${sessionScope['user_name']}</a></b><%
+                                    %><b><a href='usercp.jsp' style="text-transform: capitalize;">${sessionScope['user_name']}</a></b><%
                                 }
                                 else
                                 {

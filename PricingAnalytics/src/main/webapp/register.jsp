@@ -63,7 +63,7 @@
                 terms.focus();
               return false;
           }
-            else alert('OK, đã nhập đúng dữ liệu');
+            else alert('Đăng ký thành công');
             return true;
         }
     </script>
@@ -88,28 +88,29 @@
                <form name="register" method="post" action="register" onsubmit="return checkinput();">
                     <table>
                         <TR>
+                            <td colspan="2">
                             <%
-                                session.setAttribute("error_register", "0");
+                                
                                 String error_register =  (String)session.getAttribute("error_register"); 
                                
-                                if(error_register=="0")
-                                 {
-                                  %> <p>Đăng ký thành công</p> <%
-                                 }
+                                
                                 if(error_register=="1")
                                  {
                                      %> <p>Tài khoản đã đăng ký</p> <%
+                                     session.setAttribute("error_register",null);
                                  }
                                  if(error_register=="2")
                                  {
                                      %> <p>Email đã đăng ký</p> <%
+                                     session.setAttribute("error_register",null);
                                  }
                                  
                             %>
+                            </td>
                         </TR>
                         <TR>
-                            <TD WIDTH="200">Tài Khoản*</TD>
-                            <TD WIDTH="150"><input type="text" name="user_name"><br></TD>
+                            <TD>Tài Khoản*</TD>
+                            <TD WIDTH="400px"><input type="text" name="user_name"><br></TD>
                         </TR>
                         <TR>
                             <TD>Mật Khẩu*</TD>
@@ -158,14 +159,13 @@
                                 <TD>Giới thiệu công ty</TD>
                                 <TD><input type="text" name="company_description"><br> </TD>
                         </TR>
-                        <TR>
-                                
-                            <td> 
-                                <p><input type="checkbox" name="terms"> I accept the <u>Terms and Conditions</u></p>
+                        <TR>  
+                            <td colspan="2"> 
+                                <p><input type="checkbox" name="terms" align="center"> I accept the <u>Terms and Conditions</u></p>
                             </td>
                         </TR>
                         <TR>
-                                 <TD align="center"><input type="submit" value="Đăng ký"></TD>
+                                 <TD  colspan="2" align="center"><input type="submit" value="Đăng ký"></TD>
                         </TR>
                     </table>
                </form>

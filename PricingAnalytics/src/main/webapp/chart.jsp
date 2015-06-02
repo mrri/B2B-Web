@@ -6,48 +6,43 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+ <html>
   <head>
-    <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    
+  </head>
+  <body>
+      <div id="columnchart_material" style="width: 900px; height: 500px;"></div>
+      <%
+          int a =1000;
+          int b =1170;
+          out.print(a);
+          %>
+      
     <script type="text/javascript">
-
-      // Load the Visualization API and the piechart package.
-      google.load('visualization', '1.0', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
+       
+      google.load("visualization", "1.1", {packages:["bar"]});
       google.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
       function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['Mushrooms', 3],
-          ['Onions', 1],
-          ['Olives', 1],
-          ['Zucchini', 1],
-          ['Pepperoni', 2]
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales'],
+          ['2014', 0],
+          ['2015', ${user_id}],
+          ['2016',6],
+          ['2017', 2]
         ]);
 
-        // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
-                       'width':800,
-                       'height':600};
+        var options = {
+          chart: {
+            title: 'Khả năng cung cấp',
+            subtitle: '',
+          }
+        };
 
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
         chart.draw(data, options);
       }
     </script>
-  </head>
-
-  <body>
-    <!--Div that will hold the pie chart-->
-    <div id="chart_div"></div>
   </body>
 </html>
