@@ -35,6 +35,10 @@ public class ProductAdd extends HttpServlet {
         int user_id = 0;
         if(id != null)
            user_id = Integer.parseInt(id);
+        String quantity_product = request.getParameter("quantity");
+        int quantity = 0;
+        if(quantity_product != null)
+            quantity = Integer.parseInt(quantity_product);
         String category_key = (String) session.getAttribute("keyid");
          if(category_key != null)
              key = Integer.parseInt(category_key);
@@ -47,7 +51,7 @@ public class ProductAdd extends HttpServlet {
         String description = request.getParameter("product_description");
         String price = request.getParameter("product_price");
         String image = "";
-        Product product = new Product(user_id, key, product_name, date ,description, price, image);
+        Product product = new Product(user_id, quantity,key, product_name, date ,description, price, image);
         //Product product = new Product();
         EntityManagerFactory entityFactory = Persistence.createEntityManagerFactory("hibernate");
         EntityManager entityManager = entityFactory.createEntityManager();

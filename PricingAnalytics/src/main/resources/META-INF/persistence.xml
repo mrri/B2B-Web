@@ -7,6 +7,8 @@
     <!-- Database Properties -->
     <class>PricingAnalyticsObject.UserInfo</class>
     <class>PricingAnalyticsObject.Product</class>
+    <class>PricingAnalyticsObject.Customer</class>
+    <class>PricingAnalyticsObject.Message</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <property name="hibernate.show_sql" value="true"/>
@@ -16,7 +18,7 @@
       <property name="hibernate.hbm2ddl.auto" value="validate"/>
       <property name="hibernate.archive.autodetection" value="class"/>
       <!-- Configuring Connection Pool -->
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3307/b2b"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/b2b?useUnicode=true&amp;characterEncoding=UTF-8"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value=""/>

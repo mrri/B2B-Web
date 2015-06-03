@@ -15,8 +15,18 @@ public class Product {
     int product_id;
     @Column(name = "user_id") 
     int user_id;
+    @Column(name="quantity")
+    int quantity;
     @Column(name = "product_category") 
     int product_category;
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
     @Column(name = "product_name") 
     String product_name;
     @Column(name = "date") 
@@ -95,6 +105,7 @@ public class Product {
     
     public Product(){
         this.user_id = 0;
+        this.quantity = 0;
         this.product_name = "admin";
         this.product_category = 0;
         this.description = "admin";
@@ -103,7 +114,8 @@ public class Product {
         this.date = new Date(2000,01,01);
     }
     
-    public Product(int user_id, int product_category, String product_name, Date date,String description, String price, String image){
+    public Product(int user_id, int quantity, int product_category, String product_name, Date date,String description, String price, String image){
+        this.quantity = quantity;
         this.user_id = user_id;
         this.product_category = product_category;
         this.product_name = product_name;
