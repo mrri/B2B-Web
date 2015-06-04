@@ -16,12 +16,14 @@
         <%@include file="header.jsp" %>
         <div id = "wrapper">
             <%@include file="cp_user.jsp" %>
+            
+            <div id="title_manager_product">
+                <a href="addnewproduct.jsp"><strong>Thêm sản phẩm</strong></a>
+            </div>
+             
             <div id="manager_product">
-                
-                <table style="width:100%">
-                    <tr>
-                        <td colspan="3"><a href="addnewproduct.jsp"><strong>Thêm sản phẩm</strong></a></td>
-                    </tr>
+                 
+                <table style="width:100%" border="1">
                     <tr>
                         <th>STT</th>
                         <th>Tên sản phẩm</th>
@@ -32,7 +34,7 @@
                         <tr>
                             <td>${counter.count}</td>
                             <td><a href="productdetail.jsp?item=${Product.product_id}">${Product.product_name}</a></td>
-                            <td></td>
+                            <td align="center">${Product.date}</td>
                             <td align="center">Làm mới || <a  href="manage_product.jsp?item=${Product.product_id}&edit_code=2">Chỉnh sửa</a> || <a  href="manage_product.jsp?item=${Product.product_id}&edit_code=1">Xóa</a></td>
                         </tr>
                     </c:forEach>

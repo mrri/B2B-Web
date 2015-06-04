@@ -302,7 +302,13 @@ margin:0px auto;
     margin-top: 10px;
     width: 730px;
     float: right;
-    border: 1px solid #ccc;  
+   
+}
+#title_manager_product{
+    margin-top: 10px;
+    width: 730px;
+    border: 1px solid #ccc;
+    float:right;
 }
 /*
 #manager_product table, th, td {
@@ -359,4 +365,18 @@ box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.75);
     width: 730px;
     
     float: right;
+}
+/*message page*/
+#message{
+    width: 730px;
+    margin-top: 10px;
+    float: right;
+   border: 1px solid red;
+   
+}
+#changepassword{
+    width: 730px;
+    margin-top: 10px;
+    float: right;
+   border: 1px solid red;
 }

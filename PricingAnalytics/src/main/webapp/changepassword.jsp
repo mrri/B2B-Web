@@ -14,6 +14,18 @@
     <body>
         <%@include file="header.jsp" %>
         <div id="wrapper">
+            <%
+         if(user_name.contentEquals("tuananh"))
+         {
+              %><%@include file="cp_admin.jsp"%><% 
+         }
+         else
+         {
+             %><%@include file="cp_user.jsp"%><% 
+         }
+         
+         %>
+         <div id="changepassword">
              <form name="register" method="post" action="register" onsubmit="return checkinput();">
             <table>
                 <tr>
@@ -41,6 +53,7 @@
                 </tr>
             </table>
              </form>
+        </div>
         </div>
          <%@include file="footer.jsp" %>
     </body>

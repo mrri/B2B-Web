@@ -120,7 +120,7 @@
                 });
             </script>   
                     
-            <div class="danhmucsanpham" id="danhmucsanpham">
+        <div class="danhmucsanpham" id="danhmucsanpham">
             <div id="danhmuc1">
                 <ul>
                     <li><span>Điện Máy</span></li>

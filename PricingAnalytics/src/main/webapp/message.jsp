@@ -20,16 +20,19 @@
        
         
         <div id="message">
-            <table>
-            <c:forEach items="${requestScope.message}" var="messsage" >
-                        <tr>
-                            <td><a href="m0">${message.message_content}</a></td>
-                        </tr>
-                    </c:forEach>
+            <table border="1">
+                <tr>
+                <c:forEach items="${requestScope.message}" var="Message" >
+                        <td>Tin nhắn: ${Message.message_content}</td>
+                </c:forEach>
+                </tr>
+                <tr>
+                 <c:forEach items="${requestScope.customer}" var="Customer">  
+                     <td>name: ${Customer.customer_name}</td>
+                       
+                </c:forEach>       
+                </tr>
             </table>
-            
-            
-            
             
         </div>
         

@@ -43,7 +43,7 @@ public class MessageManager extends HttpServlet {
             List<Message> message_result = query_message.getResultList();
             List<Customer> customer_result = new ArrayList<Customer>();
             for(int i = 0; i < message_result.size(); i++){
-                Query query_customer = entityManager.createQuery("SELECT E FROM Customer E WHERE E.customer_id :customer_id");
+                Query query_customer = entityManager.createQuery("SELECT E FROM Customer E WHERE E.customer_id= :customer_id");
                 query_customer.setParameter("customer_id",message_result.get(i).getCustomer_id());
                 customer_result.add((Customer) query_customer.getSingleResult());
             }

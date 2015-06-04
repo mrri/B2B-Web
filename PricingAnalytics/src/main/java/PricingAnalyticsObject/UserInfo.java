@@ -16,6 +16,18 @@ import javax.persistence.Table;
 @Entity
 @Table(name="user")
 public class UserInfo implements Serializable {
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
     
     @Id
     @Column(name="user_id")
