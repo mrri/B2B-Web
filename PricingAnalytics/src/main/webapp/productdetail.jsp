@@ -14,8 +14,9 @@
          <c:import url="/product_detail" />
     </head>
     <body>
-        <%@include file="header.jsp" %>
         
+        <%@include file="header.jsp" %>
+       
         <div id="wrapper">
             
            
@@ -27,20 +28,25 @@
             </div>
             <div id="product_detail0">
                 
-                <table>
-                    
+                <table style="margin: 5px 5px;">
+                    <%
+                    String item = request.getParameter("item");  
+                            session.setAttribute("product_id", item);
+                            %>
                     <tr>
                         <td>Tên sản phẩm</td>
-                        <td>:</td>
-                        
-                        
-                        
+                        <td>:</td>                                        
                         <td>${product.product_name}</td>
                     </tr>
                     <tr>
                         <td>Giá</td>
                         <td>:</td>
                         <td>${product.price}</td>
+                    </tr>
+                    <tr>
+                        <td>Số lượng</td>
+                        <td>:</td>
+                       <td>${product.quantity}</td>
                     </tr>
                     <tr>
                         <td>Nhà cung cấp</td>
@@ -56,27 +62,35 @@
             </div>
             <div id="product_contact">
                 <form name="message" method="post" action="message" onsubmit="return checkinput();">
-                <table>
+                <table style="margin: 5px 5px;">
                         
                         <TR>
                             <TD WIDTH="200">Họ tên*</TD>
-                            <TD WIDTH="150"><input type="text" name="contact_name"><br></TD>
+                            <TD WIDTH="150"><input type="text" name="customer_name"><br></TD>
                         </TR>
-                        <TR>
+                   <!--     <TR>
                             <TD>Công ty</TD>
                             <TD><input type="text" name="contact_company"><br> </TD>
-                        </TR>
+                        </TR>-->
                         <TR>
                             <TD>Địa chỉ</TD>
-                            <TD><input type="text" name="contact_address"><br> </TD>
+                            <TD><input type="text" name="customer_address"><br> </TD>
                         </TR>
                         <TR>
                             <TD>Điện thoại*</TD>
-                            <TD><input type="text" name="contact_email"><br> </TD>
+                            <TD><input type="text" name="customer_phone"><br> </TD>
+                        </TR>
+                        <TR>
+                            <TD>Mail</TD>
+                            <TD><input type="text" name="customer_mail"><br> </TD>
+                        </TR>
+                        <TR>
+                            <TD>Quốc gia</TD>
+                            <TD><input type="text" name="customer_country"><br> </TD>
                         </TR>
                         <TR>
                             <TD>Nội dung*</TD>
-                            <TD ><textarea rows="4" cols="40" name="contact_detail">
+                            <TD ><textarea rows="4" cols="40" name="customer_message">
                                </textarea><br> 
                             </TD>
                             
@@ -85,10 +99,7 @@
                             <TD></TD>
                             <TD align="center"><input type="submit" value="Gửi"></TD>
                             
-                            
                         </TR>
-                       
-                        
                     </table>
                 </form>
             </div>

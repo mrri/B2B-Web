@@ -20,6 +20,9 @@
                 
                 <table style="width:100%">
                     <tr>
+                        <td colspan="3"><a href="addnewproduct.jsp"><strong>Thêm sản phẩm</strong></a></td>
+                    </tr>
+                    <tr>
                         <th>STT</th>
                         <th>Tên sản phẩm</th>
                         <th>Ngày gửi</th>
@@ -28,9 +31,9 @@
                     <c:forEach items="${requestScope.productList}" var="Product" varStatus="counter">
                         <tr>
                             <td>${counter.count}</td>
-                            <td>${Product.product_name}</td>
+                            <td><a href="productdetail.jsp?item=${Product.product_id}">${Product.product_name}</a></td>
                             <td></td>
-                            <td>Làm mới || <a  href="manage_product.jsp?item=${Product.product_id}&edit_code=2">Chỉnh sửa</a> || <a  href="manage_product.jsp?item=${Product.product_id}&edit_code=1">Xóa</a></td>
+                            <td align="center">Làm mới || <a  href="manage_product.jsp?item=${Product.product_id}&edit_code=2">Chỉnh sửa</a> || <a  href="manage_product.jsp?item=${Product.product_id}&edit_code=1">Xóa</a></td>
                         </tr>
                     </c:forEach>
                 </table>

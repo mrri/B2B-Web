@@ -21,7 +21,7 @@
         
         <div id="message">
             <table>
-            <c:forEach items="${requestScope.message}" var="Product" >
+            <c:forEach items="${requestScope.message}" var="messsage" >
                         <tr>
                             <td><a href="m0">${message.message_content}</a></td>
                         </tr>

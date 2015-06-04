@@ -14,9 +14,6 @@
     
     <!-- popup login-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
-
-
-    
     </head>
     <body>
         <div id="header">
@@ -55,24 +52,31 @@
                     <!-- Dropdown mennu-->
                     <div id="dropmenu">
                         <ul>
+                            <li><a href="index.jsp">Trang chủ</a></li>
                             <li class="danhmuc">Danh mục sản phẩm</li>
-                            <li>Sản Phẩm</li>
-                            <li>Portfolio
+                           
+                       <!--     <li>Portfolio
                                     <ul>
                                             <li>Web Design</li>
-                                            <li>Web Development</li>
-                                            <li>Illustrations</li>
                                     </ul>
-                            </li>
+                            </li>-->
+                            
+                                <%
+                                    String user_name =  (String)session.getAttribute("user_name"); 
+                                    if(user_name!=null && user_name!="1")
+                                    {
+                                        %> <li><a href="usercp.jsp"> Quản lý</a></li><%
+                                    }
+                                %>
                             <li>Nhà cung cấp</li>
-                            <li>Quản lý</li>
+                            
                         </ul>
                     </div>
                             <!--Khung Account-->
                     <div id="account_box">
                         <div id="account_box1">
                             <%
-                                String user_name =  (String)session.getAttribute("user_name"); 
+                                
                                 String user_id = (String) session.getAttribute("user_id");
                                 if(user_name=="1"){
                                     session.setAttribute("user_name",null);
@@ -119,38 +123,38 @@
             <div class="danhmucsanpham" id="danhmucsanpham">
             <div id="danhmuc1">
                 <ul>
-                    <li><span>Điện lạnh</span></li>
-                    <li >- <a href="http://www.sosanhgia.com/t8-may-giat.html" title="Giá Máy giặt">Máy giặt</a></li>
-                    <li >- <a href="http://www.sosanhgia.com/t10-tu-lanh.html" title="Giá Tủ lạnh">Tủ lạnh</a></li>
-                    <li >- <a href="http://www.sosanhgia.com/t19-may-lanh-dieu-hoa.html" title="Giá Máy lạnh">Máy lạnh / Điều hoà</a></li>
-                    <li>- <a href="http://www.sosanhgia.com/t22-may-nuoc-nong.html" title="Giá Máy nước nóng">Máy nước nóng</a></li>
+                    <li><span>Điện Máy</span></li>
+                    <li >- <a href="" title="Giá Máy giặt">Máy giặt</a></li>
+                    <li >- <a href="" title="Giá Tủ lạnh">Tủ lạnh</a></li>
+                    <li >- <a href="" title="Giá Máy lạnh">Máy lạnh / Điều hoà</a></li>
+                    <li>- <a href="" title="Giá Máy nước nóng">Máy nước nóng</a></li>
                 </ul >
             </div>
             <div id="danhmuc2">
                 <ul>
-                    <li><span>Điện lạnh</span></li>
-                    <li >- <a href="http://www.sosanhgia.com/t8-may-giat.html" title="Giá Máy giặt">Máy giặt</a></li>
-                    <li >- <a href="http://www.sosanhgia.com/t10-tu-lanh.html" title="Giá Tủ lạnh">Tủ lạnh</a></li>
-                    <li >- <a href="http://www.sosanhgia.com/t19-may-lanh-dieu-hoa.html" title="Giá Máy lạnh">Máy lạnh / Điều hoà</a></li>
-                    <li>- <a href="http://www.sosanhgia.com/t22-may-nuoc-nong.html" title="Giá Máy nước nóng">Máy nước nóng</a></li>
+                    <li><span>Điện Tử</span></li>
+                    <li >- <a href="" title="">Máy lạnh</a></li>
+                    <li >- <a href="" title="">Máy giặt</a></li>
+                    <li >- <a href="" title="">Tủ lạnh</a></li>
+                    <li >- <a href="" title="">Máy nước nóng</a></li>
+                    
+                   
                 </ul>
             </div>
             <div id="danhmuc3">
                 <ul>
-                    <li><span>Điện lạnh</span></li>
-                    <li >- <a href="http://www.sosanhgia.com/t8-may-giat.html" title="Giá Máy giặt">Máy giặt</a></li>
-                    <li >- <a href="http://www.sosanhgia.com/t10-tu-lanh.html" title="Giá Tủ lạnh">Tủ lạnh</a></li>
-                    <li >- <a href="http://www.sosanhgia.com/t19-may-lanh-dieu-hoa.html" title="Giá Máy lạnh">Máy lạnh / Điều hoà</a></li>
-                    <li>- <a href="http://www.sosanhgia.com/t22-may-nuoc-nong.html" title="Giá Máy nước nóng">Máy nước nóng</a></li>
+                    <li><span>Gia dụng</span></li>
+                    <li >- <a href="" title="">Tivi</a></li>
+                    <li >- <a href="" title="">Ampli</a></li>
+                    <li >- <a href="" title="">Đầu DVD</a></li>
+                  
                 </ul>
             </div>
             <div id="danhmuc4">
                 <ul>
-                    <li><span>Điện lạnh</span></li>
-                    <li >- <a href="http://www.sosanhgia.com/t8-may-giat.html" title="Giá Máy giặt">Máy giặt</a></li>
-                    <li >- <a href="http://www.sosanhgia.com/t10-tu-lanh.html" title="Giá Tủ lạnh">Tủ lạnh</a></li>
-                    <li >- <a href="http://www.sosanhgia.com/t19-may-lanh-dieu-hoa.html" title="Giá Máy lạnh">Máy lạnh / Điều hoà</a></li>
-                    <li>- <a href="http://www.sosanhgia.com/t22-may-nuoc-nong.html" title="Giá Máy nước nóng">Máy nước nóng</a></li>
+                    <li><span>Kỹ thuật số</span></li>
+                   <li >- <a href="" title=""></a>Máy xay sinh tố</li>
+                    <li >- <a href="" title=""></a>Lò vi sóng</li>
                 </ul>
             </div>
                 

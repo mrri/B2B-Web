@@ -12,12 +12,17 @@
         <title>JSP Page</title>
     </head>
     <body>
+          <%@include file="header.jsp" %>
         <%
-             String test =  (String)session.getAttribute("keyid"); 
-              String thongtinsanpham = request.getParameter("thongtinsanpham"); 
-              out.print(test);
-              out.print(thongtinsanpham);
+        
+             if( ){
+                 out.print("admin");
+             }
+             else{
+                 out.print("ko phai ad");
+             }
+           
             %>
-            
+            ${user_name}
     </body>
 </html>

@@ -13,11 +13,7 @@
   </head>
   <body>
       <div id="columnchart_material" style="width: 900px; height: 500px;"></div>
-      <%
-          int a =1000;
-          int b =1170;
-          out.print(a);
-          %>
+      
       
     <script type="text/javascript">
        

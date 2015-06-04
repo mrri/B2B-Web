@@ -85,6 +85,10 @@ tinymce.init({
                             <TD WIDTH="67%"><input type="text" name="product_name"><br></TD>
                         </TR>
                         <TR>
+                            <TD WIDTH="33%">Số lượng</TD>
+                            <TD WIDTH="67%"><input type="text" name="quantity"><br></TD>
+                        </TR>
+                        <TR>
                             Thông tin sản phẩm</br></br>
                             <form method="post" >
                                  <textarea name="product_description"></textarea>

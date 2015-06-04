@@ -18,6 +18,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -25,6 +26,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class CustomerSendMessage extends HttpServlet {
 
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -34,7 +36,8 @@ public class CustomerSendMessage extends HttpServlet {
         String customer_country = request.getParameter("customer_country");
         String customer_phone = request.getParameter("customer_phone");
         String customer_message = request.getParameter("customer_message");
-        String item = request.getParameter("item");
+        HttpSession session = request.getSession(true);
+        String item = (String)session.getAttribute("product_id");
         int product_id = 0;
         if(item != null)
             product_id = Integer.parseInt(item);
@@ -63,7 +66,6 @@ public class CustomerSendMessage extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
     }
     
     @Override

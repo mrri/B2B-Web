@@ -70,106 +70,125 @@
 </head>
 
 <body>
-    <!------------------------ Header ---------------------->
+    <!-- Header --->
       <%@include file="header.jsp" %>
        <%
          if(user_name != null && user_name !="1")
          {
             response.sendRedirect("index.jsp");
          }
-    %>
+       %>
      
-      <!------------------------ Body ---------------------->
+      <!-- Body -->
 	<div id = "wrapper">
-	<!-----------------------------------Register Open------------------------------------------>
-        
-        <h4> Đăng Ký Tài Khoản</h4>
-          <div id="register">
-               <form name="register" method="post" action="register" onsubmit="return checkinput();">
-                    <table>
-                        <TR>
-                            <td colspan="2">
-                            <%
-                                
-                                String error_register =  (String)session.getAttribute("error_register"); 
-                               
-                                
-                                if(error_register=="1")
-                                 {
-                                     %> <p>Tài khoản đã đăng ký</p> <%
-                                     session.setAttribute("error_register",null);
-                                 }
-                                 if(error_register=="2")
-                                 {
-                                     %> <p>Email đã đăng ký</p> <%
-                                     session.setAttribute("error_register",null);
-                                 }
-                                 
-                            %>
-                            </td>
-                        </TR>
-                        <TR>
-                            <TD>Tài Khoản*</TD>
-                            <TD WIDTH="400px"><input type="text" name="user_name"><br></TD>
-                        </TR>
-                        <TR>
-                            <TD>Mật Khẩu*</TD>
-                            <TD><input type="password" name="password"><br> </TD>
-                        </TR>
-                        <TR>
-                            <TD>Xác Nhận Mật Khẩu*</TD>
-                            <TD><input type="password" name="comfirm_password"><br> </TD>
-                        </TR>
-                        <TR>
-                            <TD>Email*</TD>
-                            <TD><input type="text" name="email"><br> </TD>
-                        </TR>
-                        <TR>
-                            <TD>Họ Tên*</TD>
-                            <TD ><input type="text" name="full_name"><br> </TD>
-                        </TR>
-                        <TR>
-                            <TD>Công ty</TD>
-                            <TD><input type="text" name="company"><br> </TD>
-                        </TR>
-                        <TR>
-                            <TD>Địa chỉ</TD>
-                            <TD><input type="text" name="address"><br> </TD>
-                        </TR>
+	<!--Register Open-->
 
-                        <TR>
-                            <TD>Quốc gia</TD>
-                            <TD><input type="text" name="country"><br> </TD>
-                        </TR>
-
-                        <TR>
-                            <TD>Điện thoại</TD>
-                            <TD><input type="text" name="phone"><br> </TD>
-                        </TR>
-                        <TR>
-                                <TD>Fax</TD>
-                                <TD><input type="text" name="fax"><br> </TD>
-                        </TR>
-                        <TR>
-                                <TD>Website</TD>
-                                <TD><input type="text" name="website"><br> </TD>
-                        </TR>
-
-                        <TR>
-                                <TD>Giới thiệu công ty</TD>
-                                <TD><input type="text" name="company_description"><br> </TD>
-                        </TR>
-                        <TR>  
-                            <td colspan="2"> 
-                                <p><input type="checkbox" name="terms" align="center"> I accept the <u>Terms and Conditions</u></p>
-                            </td>
-                        </TR>
-                        <TR>
-                                 <TD  colspan="2" align="center"><input type="submit" value="Đăng ký"></TD>
-                        </TR>
-                    </table>
-               </form>
+        <div id="banner_contact">
+           <div id="banner_contact1">
+		<div id="banner_contact1">
+                    <center><Strong style="font-size: 20px; "> Need help?</Strong></center><br>
+                     <center>   <Strong> <a  href="" style="font-size: 30px; color: #2c5198;" >Contact Us</a></Strong></center><br>
+                         <center>  <a  href="" style=" color:#2c5198; " > Customer Service</a> | <a  href="" style=" color:#2c5198; " >FAQ</a></center>
+		</div>
+                <div id="banner_contact2">
+                </div>
+                <div id="banner_contact3">	
+                </div>
             </div>
+        </div>
+
+        <div id="register">
+           <form name="register" method="post" action="register" onsubmit="return checkinput();">
+                <table>
+                    <tr>
+                        <td colspan="2"><Strong> Đăng Ký Tài Khoản</Strong></td>
+                    </tr>
+                    <TR>
+                        <td colspan="2">
+                        <%
+
+                            String error_register =  (String)session.getAttribute("error_register"); 
+
+
+                            if(error_register=="1")
+                             {
+                                 %> <p>Tài khoản đã đăng ký</p> <%
+                                 session.setAttribute("error_register",null);
+                             }
+                             if(error_register=="2")
+                             {
+                                 %> <p>Email đã đăng ký</p> <%
+                                 session.setAttribute("error_register",null);
+                             }
+
+                        %>
+                        </td>
+                    </TR>
+                    <TR>
+                        <TD>Tài Khoản*</TD>
+                        <TD WIDTH="400px"><input type="text" name="user_name"><br></TD>
+                    </TR>
+                    <TR>
+                        <TD>Mật Khẩu*</TD>
+                        <TD><input type="password" name="password"><br> </TD>
+                    </TR>
+                    <TR>
+                        <TD>Xác Nhận Mật Khẩu*</TD>
+                        <TD><input type="password" name="comfirm_password"><br> </TD>
+                    </TR>
+                    <TR>
+                        <TD>Email*</TD>
+                        <TD><input type="text" name="email"><br> </TD>
+                    </TR>
+                    <TR>
+                        <TD>Họ Tên*</TD>
+                        <TD ><input type="text" name="full_name"><br> </TD>
+                    </TR>
+                    <TR>
+                        <TD>Công ty</TD>
+                        <TD><input type="text" name="company"><br> </TD>
+                    </TR>
+                    <TR>
+                        <TD>Địa chỉ</TD>
+                        <TD><input type="text" name="address"><br> </TD>
+                    </TR>
+
+                    <TR>
+                        <TD>Quốc gia</TD>
+                        <TD><input type="text" name="country"><br> </TD>
+                    </TR>
+
+                    <TR>
+                        <TD>Điện thoại</TD>
+                        <TD><input type="text" name="phone"><br> </TD>
+                    </TR>
+                    <TR>
+                            <TD>Fax</TD>
+                            <TD><input type="text" name="fax"><br> </TD>
+                    </TR>
+                    <TR>
+                            <TD>Website</TD>
+                            <TD><input type="text" name="website"><br> </TD>
+                    </TR>
+
+                    <TR>
+                            <TD>Giới thiệu công ty</TD>
+                            <TD><input type="text" name="company_description"><br> </TD>
+                    </TR>
+                    <TR>  
+                        <td colspan="2"> 
+                            <p><input type="checkbox" name="terms" align="center"> I accept the <u>Terms and Conditions</u></p>
+                        </td>
+                    </TR>
+                    <TR>
+                             <TD  colspan="2" align="center"><input type="submit" value="Đăng ký"></TD>
+                    </TR>
+                </table>
+           </form>
+        </div>
+                            
+                            
+        
 		
     <!-----------------------------------Register Close------------------------------------------>	
 	</div>

@@ -31,14 +31,14 @@
                 </div>
                 
                 <div id="newproduct_title3">
-                    <Strong style="line-height: 25px;">| Tất cả sản phẩm</Strong> <br>
+                    <a href="allproducts.jsp"> <Strong style="line-height: 25px;">| Tất cả sản phẩm</Strong></a>
                 </div>
             </div>
-            <table style="margin-left: 10px; margin-right: 10px;">
+            <table style="margin-left: 10px; margin-right: 10px; ma">
                 <tr>
                     <c:forEach items="${requestScope.productList}" var="Product"  end="5">
                                      
-                        <td><a href="productdetail.jsp?item=${Product.product_id}"><img src="http://the-gadgeteer.com/wp-content/uploads/2015/02/dell-xps13-150x150.jpg"></a></td>
+                        <td><a href="productdetail.jsp?item=${Product.product_id}"><img src="images/noimage.png"width="150" height="150"></a></td>
                     </c:forEach>
                 </tr>
                 <tr id="images">
@@ -46,13 +46,13 @@
                         <td><center><a href="productdetail.jsp?item=${Product.product_id}">${Product.product_name}</a></center></td>
                     </c:forEach>
                 </tr>
-            </table style="margin-left: 10px; margin-right: 10px;">
+            </table>
             <!--Table 2-->
-             <table>
+             <table style="margin-left: 10px; margin-right: 10px; margin-bottom: 10px;">
                 <tr>
                     <c:forEach items="${requestScope.productList}" var="Product"  begin ="5" end="10">
                         
-                        <td><a href="productdetail.jsp?item=${Product.product_id}"><img src="http://the-gadgeteer.com/wp-content/uploads/2015/02/dell-xps13-150x150.jpg"></a></td>
+                        <td><a href="productdetail.jsp?item=${Product.product_id}"><img src="images/noimage.png" width="150" height="150"></a></td>
                     </c:forEach>
                 </tr>
                 <tr id="images">

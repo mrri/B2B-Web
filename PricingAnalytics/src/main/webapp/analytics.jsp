@@ -17,8 +17,12 @@
             
             <table border="1">
                 <tr>
-                    <td>Tổng số tài khoản</td>
-                    <td>Đăng ký hôm nay</td>
+                    <th style="background: red; color: white; font-size: 20px;"><Strong>Tổng số tài khoản</Strong> <br>
+                    10
+                    </th>
+                    <th style="background: #ccc; color: white; font-size: 20px;">Đăng ký hôm nay<br>
+                        10
+                    </th>
                     <td>Tổng tài khoản bị khóa</td>
                     <td>Bị khóa hôm nay</td>
                 </tr>

@@ -16,30 +16,22 @@
             response.sendRedirect("index.jsp");
          }
     %>
-    
-
-   
-   
-        
-    
      <!-- Body -->
      <div id="wrapper">
         
          <%
-         String test = user_id;
-         String test2 = "1";
-         if(test == test2)
+         
+         if(user_name.contentEquals("tuananh"))
          {
-             
-                out.print("admin");
+              %><%@include file="cp_admin.jsp"%><% 
          }
-         if(test != test2)
+         else
          {
-             
-                %> <%@include file="cp_user.jsp"%><%
+             %><%@include file="cp_user.jsp"%><% 
          }
+         
          %>
-          
+         
          <%@include file="account_info.jsp"%>
        
        
