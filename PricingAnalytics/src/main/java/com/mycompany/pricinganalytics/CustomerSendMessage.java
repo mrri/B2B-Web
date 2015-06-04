@@ -60,6 +60,7 @@ public class CustomerSendMessage extends HttpServlet {
         entityManager.persist(ms);
         entityManager.getTransaction().commit();
         entityManager.close();
+        response.sendRedirect("index.jsp");
     }
 
   

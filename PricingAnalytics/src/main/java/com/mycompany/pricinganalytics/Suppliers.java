@@ -39,8 +39,8 @@ public class Suppliers extends HttpServlet {
         catch(NoResultException e){
             
         }
-        if(listSuppliers == null){
-            
+        if(listSuppliers != null){
+            request.setAttribute("suplier", listSuppliers);
         }
         else{
             //do something
