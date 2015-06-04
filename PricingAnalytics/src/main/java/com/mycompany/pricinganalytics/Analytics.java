@@ -5,6 +5,7 @@
  */
 package com.mycompany.pricinganalytics;
 
+import PricingAnalyticsObject.Category;
 import PricingAnalyticsObject.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -42,9 +43,8 @@ public class Analytics extends HttpServlet {
         EntityManagerFactory entityFactory = Persistence.createEntityManagerFactory("hibernate");
         EntityManager entityManager = entityFactory.createEntityManager();
         List<Product> listProduct  = null;//new ArrayList<Product>();
-        List<Integer> total = new ArrayList<Integer>();
-        for(int i = 0; i < 15; i++)
-             total.add(0);
+        List<Category> total = new ArrayList<Category>();
+ 
         Query query_poduct = entityManager.createQuery("SELECT E FROM Product E");
         try{
             listProduct = query_poduct.getResultList();
@@ -76,10 +76,10 @@ public class Analytics extends HttpServlet {
                 else
                     count_kythuatso += 1;  
             }
-            total.add(count_dienmay);
-            total.add(count_dientu);
-            total.add(count_giadung);
-            total.add(count_kythuatso);
+            total.add(new Category("Điện Máy",count_dienmay));
+            total.add(new Category("Điện Tử",count_dientu));
+            total.add(new Category("Gia Dụng",count_giadung));
+            total.add(new Category("Kỹ Thuật Số",count_kythuatso));
             request.setAttribute("analyticsTotal", total);
           //  request.getRequestDispatcher("/newproduct.jsp").forward(request, response);
         }
