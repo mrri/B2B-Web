@@ -5,9 +5,11 @@
  */
 package com.mycompany.pricinganalytics;
 
+import PricingAnalyticsObject.Customer;
 import PricingAnalyticsObject.Message;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -39,7 +41,17 @@ public class MessageManager extends HttpServlet {
             Query query_message = entityManager.createQuery("SELECT E FROM Message E WHERE E.user_id= :user_id");
             query_message.setParameter("user_id", user_id);
             List<Message> message_result = query_message.getResultList();
+            List<Customer> customer_result = new ArrayList<Customer>();
+            for(int i = 0; i < message_result.size(); i++){
+                Query query_customer = entityManager.createQuery("SELECT E FROM Customer E WHERE E.customer_id :customer_id");
+                query_customer.setParameter("customer_id",message_result.get(i).getCustomer_id());
+                customer_result.add((Customer) query_customer.getSingleResult());
+            }
+            /*Query query_customer = entityManager.createQuery("SELECT E FROM Message E WHERE E.user_id= :user_id");
+            query_customer.setParameter("user_id", );
+            List<Customer> customer_result = query_customer.getResultList();*/
             request.setAttribute("message", message_result);
+            request.setAttribute("customer", customer_result);
         }
     }
 
