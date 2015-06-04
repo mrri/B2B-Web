@@ -5,8 +5,17 @@
  */
 package com.mycompany.pricinganalytics;
 
+import PricingAnalyticsObject.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.NoResultException;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,70 +26,68 @@ import javax.servlet.http.HttpServletResponse;
  * @author Quoc Huy Ngo
  */
 public class Analytics extends HttpServlet {
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+ 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Analytics</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Analytics at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+           
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        EntityManagerFactory entityFactory = Persistence.createEntityManagerFactory("hibernate");
+        EntityManager entityManager = entityFactory.createEntityManager();
+        List<Product> listProduct  = null;//new ArrayList<Product>();
+        List<Integer> total = new ArrayList<Integer>();
+        for(int i = 0; i < 15; i++)
+             total.add(0);
+        Query query_poduct = entityManager.createQuery("SELECT E FROM Product E");
+        try{
+            listProduct = query_poduct.getResultList();
+            Collections.reverse(listProduct);
+        }
+        catch(NoResultException e){
+            
+        }
+        if(listProduct == null){
+            
+        }
+        else{
+            int count_dienmay = 0;
+            int count_dientu=0;
+            int count_giadung = 0;
+            int count_kythuatso = 0;
+            for(int i = 0; i < listProduct.size(); i++)
+            {
+                Product product = listProduct.get(i);
+                if(product.getProduct_category() >= 1 && product.getProduct_category() <= 4){
+                    count_dienmay += 1;
+                }
+                else if(product.getProduct_category() >= 100 && product.getProduct_category() <= 102){
+                    count_dientu += 1;
+                }
+                else if(product.getProduct_category() >= 200 && product.getProduct_category() <= 203){
+                    count_giadung += 1;
+                }
+                else
+                    count_kythuatso += 1;  
+            }
+            total.add(count_dienmay);
+            total.add(count_dientu);
+            total.add(count_giadung);
+            total.add(count_kythuatso);
+            request.setAttribute("analyticsTotal", total);
+          //  request.getRequestDispatcher("/newproduct.jsp").forward(request, response);
+        }
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
 }
