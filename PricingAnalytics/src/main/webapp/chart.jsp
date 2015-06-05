@@ -20,7 +20,7 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales'],
+          ['Danh mục', 'Số lượng'],
           <c:forEach items="${requestScope.analyticsTotal}" var="Category">
                          
                      ['${Category.name}',${Category.total_product}],    

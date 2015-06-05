@@ -19,7 +19,7 @@
                 
                 <c:forEach items="${requestScope.productList}" var="Product">
                     <tr>
-                         <td><a href="productdetail.jsp?item=${Product.product_id}"><img src="http://the-gadgeteer.com/wp-content/uploads/2015/02/dell-xps13-150x150.jpg"></a></td>
+                         <td><a href="productdetail.jsp?item=${Product.product_id}">    <img src="images/noimage.png" width="300" height="200"></a></td>
                         <td><center><a href="productdetail.jsp?item=${Product.product_id}">${Product.product_name}</a></center></td>
                     </tr>
                 </c:forEach>

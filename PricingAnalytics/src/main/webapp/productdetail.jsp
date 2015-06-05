@@ -24,7 +24,7 @@
             <div>
             <div id="product_images">
                 
-                <img src="http://www.acevn.com/mydata/photo_large/tuananh20150526130116350.jpg" width="400" height="300">
+                <img src="images/noimage.png" width="400" height="300">
             </div>
             <div id="product_detail0">
                 

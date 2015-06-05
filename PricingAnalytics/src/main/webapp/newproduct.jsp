@@ -38,7 +38,7 @@
                 <tr>
                     <c:forEach items="${requestScope.productList}" var="Product"  end="5">
                                      
-                        <td><a href="productdetail.jsp?item=${Product.product_id}"><img src="images/noimage.png"width="150" height="150"></a></td>
+                        <td><a href="productdetail.jsp?item=${Product.product_id}"><img src="images/noimage.png" width="150" height="150"></a></td>
                     </c:forEach>
                 </tr>
                 <tr id="images">

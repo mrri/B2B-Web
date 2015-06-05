@@ -19,7 +19,7 @@
 		<tr><td>
                     <table  style="border:1px solid #CCCCCC; padding:5px; width: 200px;">
                         <tr><td><img src="images/b1.gif"/> <a href="ad_accountmanager.jsp">Quản lý tài khoản</a></td></tr>
-                        <tr><td><img src="images/b1.gif"/> <a href="">Quản lý sản phẩm</a></td></tr>
+                        <tr><td><img src="images/b1.gif"/> <a href="ad_managerproduct.jsp">Quản lý sản phẩm</a></td></tr>
                         <tr><td><img src="images/b1.gif"/> <a href="ad_analytics.jsp">Phân tích</a></td></tr>
                         
 				

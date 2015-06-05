@@ -371,12 +371,19 @@ box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.75);
     width: 730px;
     margin-top: 10px;
     float: right;
-   border: 1px solid red;
+
    
 }
 #changepassword{
     width: 730px;
     margin-top: 10px;
     float: right;
-   border: 1px solid red;
+
+}
+
+/*ad_accountmanager*/
+#ad_accountmanager{
+    width: 730px;
+    margin-top: 10px;
+    float: right;
 }
