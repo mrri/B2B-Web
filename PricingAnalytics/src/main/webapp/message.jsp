@@ -23,8 +23,7 @@
             <table border="1">
                 <tr>
                  <c:forEach items="${requestScope.customer}" var="Customer">  
-                     <td>name: ${Customer.customer_name}</td>
-                       
+                     <td>name: ${Customer.customer_name}</td> 
                 </c:forEach>       
                 </tr>
                 <tr>
